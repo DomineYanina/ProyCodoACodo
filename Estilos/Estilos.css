@@ -133,3 +133,28 @@ footer {
     85.68% {margin-left: -600%;}
     94.96% {margin-left: -600%;}
 }
+
+/*NUESTRA CARTA*/
+
+.menu{
+    padding: 2% 2% 2% 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuitemimg{
+    height: 200px;
+    width: auto;
+}
+
+.subsector{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menuitem{
+    height: 250px;
+    width: auto;
+    padding: 1% 1% 1% 1%;
+}
