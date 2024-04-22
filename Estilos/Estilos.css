@@ -1,11 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
 body {
     background-color: #359dd9;
-    background-repeat: no-repeat;
-    background-size: 15%;
-    background-attachment: fixed;
-    background-position: right 92%;
     padding: 0;
     margin: 0;
+}
+
+.amatic-sc-regular {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .amatic-sc-bold {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+.indie-flower-regular {
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+#c02{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 main{
@@ -17,7 +45,7 @@ nav {
     position: relative;
     left: 0;
     top: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     background-color: #1e6187;
     height: 10vh;
@@ -34,20 +62,19 @@ h1 {
     color: #000344
 }
 
-nav li a:link,
-nav li a:visited{
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: black;
+nav li a{
     text-decoration: none;
-    color: white;
-    font-size: 1em;
     font-weight: bold;
+    font-family: "Indie Flower", cursive;
+    font-size: 1.75em;
+    color: white;
+    font-weight: 400;
+    font-style: normal;
 }
-
 
 nav li a:hover {
     color: #ffeb00;
-    font-size: 2.2em;
+    font-size: 2.5em;
 }
 
 p {
@@ -63,7 +90,7 @@ footer {
     bottom: 0;
     width: 100vw;
     height: 10vh;
-    z-index: -1;
+    z-index: 0;
     background-color: #1e6187;
 }
 
@@ -147,6 +174,10 @@ footer {
     width: auto;
 }
 
+.menuitem:hover {
+    transform: scale(1.1); /* Escala el elemento al 110% en el hover */
+}
+
 .subsector{
     display: flex;
     flex-wrap: wrap;
@@ -154,7 +185,36 @@ footer {
 }
 
 .menuitem{
+    overflow: hidden; /* Para ocultar el contenido que sobresale durante el zoom */
+    transition: transform 0.3s ease; /* Transición suave para el efecto de zoom */
     height: 250px;
     width: auto;
     padding: 1% 1% 1% 1%;
+    margin-bottom: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sector{
+    width: 90%;
+    height: auto;
+    padding: 2% 2% 2% 2%;
+    background-color: #4e00647a;
+    margin-bottom: 5%;
+    box-shadow: 10px 10px;
+    border-radius: 75px;
+}
+
+h4{
+    font-family: "Amatic SC", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 3em;
+    text-decoration: underline;
+    text-align: center;
+    color: yellow;
+}
+
+.menuitemdesc{
+    text-align:center;
+    font-size: 1.125em;
 }
