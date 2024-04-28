@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="Estilos/Estilos.css" rel="stylesheet">
+    <link href="Estilos/EstilosReserv.css" rel="stylesheet">
     <title>Reservas</title>
 </head>
 
@@ -21,7 +21,38 @@
             <li><a href="Historia.html">Sobre nosotros</a></li>
         </ul>
     </nav>
-    <p>Desde aquí podrá resevar una mesa el día que desee.</p>
+    <!--parrafo de referencia-->
+    <p class="parrafo">Desde aquí podrá resevar una mesa el día que desee.</p>
+
+    <!--Formulario de reversacion de mesa-->
+    <form class="formulario"  action="https://formspree.io/f/xgegdwjp" method="POST">
+        <label>
+            Tú Nombre:
+            <input type="text" name="name" placeholder="name">
+        </label>
+        <label>
+            Tú Apellido:
+            <input type="text" name="lastName" placeholder="lastName">
+        </label>
+        <label>
+            Número de telefo:
+            <input type="number" name="number" placeholder="number">
+        </label>
+        <label>
+            Email:
+            <input type="email" name="email" placeholder="email">
+        </label>
+        <label>
+            Mensaje:
+            <textarea name="message" placeholder="mensaje"></textarea>
+        </label>
+        <!-- your other form fields go here -->
+        <button class="botton" type="submit">Enviar</button>
+    </form>
+
 </body>
+<footer>
+
+</footer>
 
 </html>
