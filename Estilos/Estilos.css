@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 
 body {
     background-color: #359dd9;
     padding: 0;
     margin: 0;
-}
-
-#c02{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-
 }
 
 main{
@@ -199,5 +196,72 @@ h4{
     font-size: 1.125em;
 }
 
+/*SECTOR RESERVAS*/
 
+.formulario{
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: #2774a0;
+    font-family: "Indie Flower", cursive;
+    font-size: 1.75em;
+    color: white;
+    width: 30%;
+    box-shadow: 10px 10px black;
+    height: fit-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 2% 2% 2%;
+    justify-items: start;
+    justify-content: center;
+    align-items: center;
+}
 
+.cuerpo label{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desc{
+    width: 100%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.desc p{
+    color: white;
+    font-family: "Lora", serif;
+    font-size: 0.955em;
+    text-decoration: underline;
+    color: yellow;
+}
+
+.cuerpo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cuerpo p{
+    color: white;
+    font-family: "Lora", serif;
+    font-size: 0.6em;
+}
+
+.formulario input{
+    width: 70%;
+    height: 30px;
+}
+
+.botton{
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: #637B7B;
+    color: white;
+}

@@ -4,14 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="Estilos/EstilosReserv.css" rel="stylesheet">
+    <link href="Estilos/Estilos.css" rel="stylesheet">
     <title>Reservas</title>
 </head>
-
-<body id="c01">
-    <header>
-        <h2>Reservas</h2>
-    </header>
+<body>
     <nav>
         <ul>
             <li><a href="Inicio.html">Inicio</a></li>
@@ -21,39 +17,45 @@
             <li><a href="Historia.html">Sobre nosotros</a></li>
         </ul>
     </nav>
-    <!--parrafo de referencia-->
-    <p class="parrafo">Desde aquí podrá resevar una mesa el día que desee.</p>
-
     <!--Formulario de reversacion de mesa-->
     <form class="formulario"  action="https://formspree.io/f/xgegdwjp" method="POST">
-        <label>
-            Tú Nombre:
-            <input type="text" name="name" placeholder="name">
-        </label>
-        <label>
-            Tú Apellido:
-            <input type="text" name="lastName" placeholder="lastName">
-        </label>
-        <label>
-            Número de telefo:
-            <input type="number" name="number" placeholder="number">
-        </label>
-        <label>
-            Email:
-            <input type="email" name="email" placeholder="email">
-        </label>
-        <label>
-            Mensaje:
-            <textarea name="message" placeholder="mensaje"></textarea>
-        </label>
-        <!-- lo que escriba se lo envia al free -->
-        <button class="botton" type="submit">Enviar</button>
-        <!--no me deja hacer un cambio lm jijiji-->
+        <div class="desc">
+            <p class="parrafo">Ingrese la información de la reserva.</p>
+        </div>
+        <div class="cuerpo">
+            <label>
+                <p>Nombre:</p>
+                <input type="text" name="name" placeholder="Nombre">
+            </label>
+            <label>
+                <p>Apellido:</p>
+                <input type="text" name="lastName" placeholder="Apellido">
+            </label>
+            <label>
+                <p>Teléfono:</p>
+                <input type="tel" name="number" placeholder="Teléfono">
+            </label>
+            <label>
+                <p>E-Mail:</p>
+                <input type="email" name="email" placeholder="E-Mail">
+            </label>
+            <label>
+                <p>Cantidad:</p>
+                <input type="number" name="message" placeholder="Cantidad de personas">
+            </label>
+            <label>
+                <p>Fecha:</p>
+                <input type="datetime-local" name="message" placeholder="mensaje">
+            </label>
+            <!-- lo que escriba se lo envia al free -->
+            <button class="botton" type="submit">Enviar</button>
+            <!--no me deja hacer un cambio lm jijiji-->
+        </div>  
     </form>
-
+    <footer>
+    
+    </footer>
+    <img class="logo" src="./Img/LogoMoe.png" alt="">
 </body>
-<footer>
-
-</footer>
 
 </html>
