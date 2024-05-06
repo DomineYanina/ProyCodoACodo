@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link href="Estilos/Estilos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .mySlides {display:none;}
+    </style>
     <title>La Taberna de Moe</title>
 </head>
 
@@ -30,15 +34,11 @@
                 <p>¡Únete a nosotros para una experiencia digna de Springfield!</p>
             </div>
             <div class="grid-item">2</div>
-            <div class="grid-item">
-                <div class="slider-frame">
-                    <ul>
-                        <li><img src="./Img/FotosBar/1.jpg" alt=""></li>
-                        <li><img src="./Img/FotosBar/3.jpg" alt=""></li>
-                        <li><img src="./Img/FotosBar/6.jpg" alt=""></li>
-                        <li><img src="./Img/FotosBar/7.jpg" alt=""></li>
-                    </ul>
-                </div>
+            <div class="w3-content w3-section" style="max-width:700px">
+                <img class="mySlides" src="/Img/FotosBar/1.jpg" style="width:100%">
+                <img class="mySlides" src="/Img/FotosBar/3.jpg" style="width:100%">
+                <img class="mySlides" src="/Img/FotosBar/6.jpg" style="width:100%">
+                <img class="mySlides" src="/Img/FotosBar/7.jpg" style="width:100%">
             </div>
         </div>
         
@@ -48,6 +48,23 @@
     <footer>
 
     </footer>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+        </script>
 </body>
 
 </html>
