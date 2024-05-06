@@ -16,6 +16,12 @@ body {
 main{
     padding-left:4vw;
     padding-right: 4vw;
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 nav {
@@ -269,27 +275,47 @@ h4{
 #apartadoDeContacto{
     margin-top: 50px;
     background-color: #dde8e8;
-    height: 550px;
+    height: fit-content;
     border-radius: 5px;
     border: 1px solid black;
     box-shadow: 6px 20px 10px black;
     text-align: center;
     font-size: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2%;
 }
 
 .ContactoBox{
-    margin-top: 30px;
+    margin-top: 15px;
+    width: 95%;
+}
+
+.ContactoBox button{
+    margin-top: 2%;
+    width: 80px;
+    height: 40px;
 }
 
 .cajaDeContacto{
     text-align: center;
+    width: 90%;
 }
 
-#box{
+.box{
     padding: auto;
-    margin-bottom: 55px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box input{
+    width: 75%;
+    height: 30px;
 }
 
 .textArea{

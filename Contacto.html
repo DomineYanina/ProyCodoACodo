@@ -21,46 +21,38 @@
 
     <main>
         <section id="apartadoDeContacto">
-            <h3>Contactame quiero chamba</h3>
+            <h3>Dejanos tu mensaje</h3>
             <div class="ContactoBox">
-                <div class="cajaDeContacto">
-                    <form>
-                        <!--la verdad ya me perdi jajaja la clase priLabel no se si la esto usando xD-->
-                        <div id="box">
-                            <label class="priLabel" for="name">Nombre
-                                <input type="text" name="name" placeholder="Nombre">
-                            </label>
-                        </div>
-
-                        <div id="box">
-                            <label for="email">Email:
-                                <input type="email" name="email" placeholder="Email">
-                            </label>
-                        </div>
-
-                        <div id="box">
-                            <label for="telefono">Telefono:
-                                <input type="number" name="telefono" placeholder="Telefono">
-                            </label>
-                        </div>
-
-                        <div id="box">
-                            <label for="asunto">Asunto:
-                                <input type="text" name="asunto" placeholder="Asunto">
-                            </label>
-
-                        </div>
-                        <div id="box">
-                            <label class="textArea" for="coment" type="text">Comentarios:
-                                <textarea name="coment" rows="6" cols="50" id="Comentarios"></textarea>
-                            </label>
-
-                        </div>
-                    </form>
-                </div>
+                <form>
+                    <div class="box">
+                        <label for="name" class="priLabel">Nombre:</label>
+                        <input type="text" name="name" placeholder="Nombre">
+                    </div>
+                    <div class="box">
+                        <label for="email" class="priLabel">E-Mail:</label>
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="box">
+                        <label for="telefono" class="priLabel">Teléfono:</label>
+                        <input type="number" name="telefono" placeholder="Telefono">
+                    </div>
+                    <div class="box">
+                        <label for="asunto" class="priLabel">Asunto:</label>
+                        <input type="text" name="asunto" placeholder="Asunto">
+                    </div>
+                    <div class="box">
+                        <label for="coment" class="priLabel">Mensaje:</label>
+                        <input type="text" name="comentarios" placeholder="Comentarios">
+                    </div>
+                </form>
+                <button>Enviar</button>
             </div>
         </section>
     </main>
+
+    <footer>
+
+    </footer>
 
 </body>
 
