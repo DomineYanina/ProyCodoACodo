@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 
 body {
@@ -177,16 +178,6 @@ footer {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.sector{
-    width: 90%;
-    height: auto;
-    padding: 2% 2% 2% 2%;
-    background-color: #4e00647a;
-    margin-bottom: 5%;
-    box-shadow: 10px 10px;
-    border-radius: 75px;
-}
-
 h4{
     font-family: "Amatic SC", sans-serif;
     font-weight: bold;
@@ -206,7 +197,8 @@ h4{
 
 .formulario{
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 5%;
+
     background-color: #2774a0;
     font-family: "Indie Flower", cursive;
     font-size: 1.75em;
@@ -239,7 +231,6 @@ h4{
 }
 
 .desc p{
-    color: white;
     font-family: "Lora", serif;
     font-size: 0.955em;
     text-decoration: underline;
@@ -316,3 +307,50 @@ h4{
 .textArea{
     display: flex;
 }
+
+/*SECTOR SOBRE NOSOTROS*/
+
+.filaSectorNosotros{
+    display: flex;
+    margin-top: 5%;
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+
+.sector{
+    width: 25%;
+    height: fit-content;
+    padding: 2% 2% 2% 2%;
+    background-color: #4e00647a;
+    margin-bottom: 5%;
+    box-shadow: 10px 10px;
+    border-radius: 75px;
+}
+
+.flechaAbajo{
+    width: 40px;
+    height: 40px;
+}
+
+.tit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.tit h2{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.5em;
+    text-decoration: underline;
+    text-align: center;
+    color: white;
+}
+
