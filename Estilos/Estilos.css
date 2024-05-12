@@ -147,10 +147,44 @@ footer {
 
 /*NUESTRA CARTA*/
 
-.menu{
-    padding: 2% 2% 2% 2%;
+.titulo{
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sectorComidas{
+    width: 90%;
+    height: fit-content;
+    padding: 2% 2% 2% 2%;
+    background-color: #7d7d7d;
+    color: black;
+    margin-bottom: 5%;
+    box-shadow: 10px 10px;
+    border-radius: 75px;
+}
+
+#comidas:hover{
+    background-color: #4e00647a;
+    color: yellow;
+}
+
+#bebidas:hover{
+    background-color: #4e00647a;
+    color: yellow;
+}
+
+#postres:hover{
+    background-color: #4e00647a;
+    color: yellow;
+}
+
+.menu{
+    padding: 5% 5% 5% 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .menuitemimg{

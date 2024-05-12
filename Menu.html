@@ -19,9 +19,12 @@
         </ul>
     </nav>
     <section class="menu">
-        <article class="sector">
-            <h4>Comidas</h4>
-            <div class="subsector">
+        <article class="sectorComidas" id="comidas" style="width: 25%;">
+            <div class="titulo">
+                <h4>Comidas</h4>
+                <img src="./Img/flecha-hacia-abajo.png" alt="" id="FlCo1"  class="flechaAbajo" onclick="mostrarComidas1()">
+            </div>
+            <div class="subsector" id="SubS1" style="display: none;">
                 <div class="menuitem">
                     <img src="./Img/FotosBar/Menu/Comidas/Chuletas de cerdo.jpg" alt="" class="menuitemimg">
                     <p class="menuitemdesc">Chuletas de cerdo</p>
@@ -29,6 +32,10 @@
                 <div class="menuitem">
                     <img src="./Img/FotosBar/Menu/Comidas/Costillitas de cerdo.jpg" alt="" class="menuitemimg">
                     <p class="menuitemdesc">Costillitas de cerdo</p>
+                </div>
+                <div class="menuitem">
+                    <img src="./Img/FotosBar/Menu/Comidas/Khlav Kalash.jpg" alt="" class="menuitemimg">
+                    <p class="menuitemdesc">Khlav Kalash</p>
                 </div>
                 <div class="menuitem">
                     <img src="./Img/FotosBar/Menu/Comidas/Gazpacho.jpg" alt="" class="menuitemimg">
@@ -39,27 +46,24 @@
                     <p class="menuitemdesc">Hamburguejas al vapor</p>
                 </div>
                 <div class="menuitem">
-                    <img src="./Img/FotosBar/Menu/Comidas/Khlav Kalash.jpg" alt="" class="menuitemimg">
-                    <p class="menuitemdesc">Khlav Kalash</p></div>
-                <div class="menuitem">
                     <img src="./Img/FotosBar/Menu/Comidas/KruustyBurger.jpg" alt="" class="menuitemimg">
-                    <p class="menuitemdesc">KurstyBurger</p>
-                </div>
-                <div class="menuitem">
-                    <img src="./Img/FotosBar/Menu/Comidas/CostiBurger.jpg" alt="" class="menuitemimg">
-                    <p class="menuitemdesc">CostiBurger</p>
-                </div>
-                <div class="menuitem">
-                    <img src="./Img/FotosBar/Menu/Comidas/Arroz Lenny y Carñ.jpg" alt="" class="menuitemimg">
-                    <p class="menuitemdesc">Arroz Lenny y Carl</p>
+                    <p class="menuitemdesc">KrustyBurger</p>
                 </div>
                 <div class="menuitem">
                     <img src="./Img/FotosBar/Menu/Comidas/Dedos de pollo.jpg" alt="" class="menuitemimg">
                     <p class="menuitemdesc">Dedos de pollo</p>
                 </div>
                 <div class="menuitem">
+                    <img src="./Img/FotosBar/Menu/Comidas/Arroz Lenny y Carñ.jpg" alt="" class="menuitemimg">
+                    <p class="menuitemdesc">Arroz Lenny y Carl</p>
+                </div>
+                <div class="menuitem">
+                    <img src="./Img/FotosBar/Menu/Comidas/CostiBurger.jpg" alt="" class="menuitemimg">
+                    <p class="menuitemdesc">CostiBurger</p>
+                </div>
+                <div class="menuitem">
                     <img src="./Img/FotosBar/Menu/Comidas/Hamburguesa vegana.jpg" alt="" class="menuitemimg">
-                    <p class="menuitemdesc">Hamburguesa Lisa</p>
+                    <p class="menuitemdesc">LisaGuesa de legumbres</p>
                 </div>
                 <div class="menuitem">
                     <img src="./Img/FotosBar/Menu/Comidas/Sandwich de albondigas.jpg" alt="" class="menuitemimg">
@@ -71,20 +75,27 @@
                 </div>
             </div>
         </article>
-        <article class="sector">
-            <h4>Postres</h4>
-            <div class="subsector">
+        <article class="sectorComidas" id="bebidas" style="width: 25%;">
+            <div class="titulo">
+                <h4>Postres</h4>
+                <img src="./Img/flecha-hacia-abajo.png" alt="" id="FlCo2"  class="flechaAbajo" onclick="mostrarComidas2()">
+            </div>
+            <div class="subsector" id="SubS2" style="display: none;">
                 <div class="menuitem">
-                    <img src="./Img/FotosBar/Menu/Desayuno/Rosquillas y café.jpg" alt="" class="menuitemimg">
-                    <p class="menuitemdesc">Rosquilla y café a elección</p>
+                    <img src="./Img/FotosBar/Menu/Desayuno/helado.jpg" alt="" class="menuitemimg">
+                    <p class="menuitemdesc">El arca</p>
                 </div>
                 <div class="menuitem">
-                    <img src="./Img/FotosBar/Menu/Desayuno/batido.jpg" alt="" class="menuitemimg">
-                    <p class="menuitemdesc">Batido</p>
+                    <img src="./Img/FotosBar/Menu/Desayuno/Torre de panqueques.jpg" alt="" class="menuitemimg">
+                    <p class="menuitemdesc">Pancakes</p>
                 </div>
                 <div class="menuitem">
                     <img src="./Img/FotosBar/Menu/Desayuno/Pastel de 10000 calorias.jpg" alt="" class="menuitemimg">
                     <p class="menuitemdesc">Pastel de 10.000 calorías</p>
+                </div>
+                <div class="menuitem">
+                    <img src="./Img/FotosBar/Menu/Desayuno/Rosquillas y café.jpg" alt="" class="menuitemimg">
+                    <p class="menuitemdesc">Rosquilla y café a elección</p>
                 </div>
                 <div class="menuitem">
                     <img src="./Img/FotosBar/Menu/Desayuno/Chocolate Caliente.jpeg" alt="" class="menuitemimg">
@@ -102,38 +113,25 @@
                     <img src="./Img/FotosBar/Menu/Desayuno/Apple Pie.jpg" alt="" class="menuitemimg">
                     <p class="menuitemdesc">Pie de manzana</p>
                 </div>
-                <div class="menuitem">
-                    <img src="./Img/FotosBar/Menu/Desayuno/Torre de panqueques.jpg" alt="" class="menuitemimg">
-                    <p class="menuitemdesc">Pancakes</p>
-                </div>
-                <div class="menuitem">
-                    <img src="./Img/FotosBar/Menu/Desayuno/helado.jpg" alt="" class="menuitemimg">
-                    <p class="menuitemdesc">El arca</p>
-                </div>
             </div>
         </article>
-        <article class="sector">
-            <h4>Bebidas</h4>
-            <div class="subsector">
-                <div class="menuitem">
-                    <img src="./Img/FotosBar/Menu/Bebidas/Duff.jpeg" alt="" class="menuitemimg">
-                    <p class="menuitemdesc">Cerveza Duff</p>
-                </div>
+        <article class="sectorComidas" id="postres" style="width: 25%;">
+            <div class="titulo">
+                <h4>Bebidas</h4>
+                <img src="./Img/flecha-hacia-abajo.png" alt="" id="FlCo3"  class="flechaAbajo" onclick="mostrarComidas3()">
+            </div>
+            <div class="subsector" id="SubS3" style="display: none;">
                 <div class="menuitem">
                     <img src="./Img/FotosBar/Menu/Bebidas/Te helado.jpg" alt="" class="menuitemimg">
                     <p class="menuitemdesc">Té helado</p>
                 </div>
                 <div class="menuitem">
-                    <img src="./Img/FotosBar/Menu/Bebidas/Absolut  Krusty.jpeg" alt="" class="menuitemimg">
-                    <p class="menuitemdesc">Absolut Krusty</p>
+                    <img src="./Img/FotosBar/Menu/Bebidas/cola invisible.jpg" alt="" class="menuitemimg">
+                    <p class="menuitemdesc">Cola invisible</p>
                 </div>
                 <div class="menuitem">
                     <img src="./Img/FotosBar/Menu/Bebidas/Tonico revitalizante.jpg" alt="" class="menuitemimg">
                     <p class="menuitemdesc">Tónico Revitalizante Simpson e Hijo</p>
-                </div>
-                <div class="menuitem">
-                    <img src="./Img/FotosBar/Menu/Bebidas/cola invisible.jpg" alt="" class="menuitemimg">
-                    <p class="menuitemdesc">Cola invisible</p>
                 </div>
                 <div class="menuitem">
                     <img src="./Img/FotosBar/Menu/Bebidas/buzz cola.jpg" alt="" class="menuitemimg">
@@ -142,6 +140,14 @@
                 <div class="menuitem">
                     <img src="./Img/FotosBar/Menu/Bebidas/jugo de cangrejo.jpg" alt="" class="menuitemimg">
                     <p class="menuitemdesc">Jugo de cangrejo</p>
+                </div>
+                <div class="menuitem">
+                    <img src="./Img/FotosBar/Menu/Bebidas/Duff.jpeg" alt="" class="menuitemimg">
+                    <p class="menuitemdesc">Cerveza Duff</p>
+                </div>
+                <div class="menuitem">
+                    <img src="./Img/FotosBar/Menu/Bebidas/Absolut  Krusty.jpeg" alt="" class="menuitemimg">
+                    <p class="menuitemdesc">Absolut Krusty</p>
                 </div>
                 <div class="menuitem">
                     <img src="./Img/FotosBar/Menu/Bebidas/krusty kola.jpg" alt="" class="menuitemimg">
@@ -159,9 +165,9 @@
         </article>
     </section>
     <img class="logo" src="./Img/LogoMoe.png" alt="">
+    <footer>
+    
+    </footer>
 </body>
-<footer>
-
-</footer>
-
+<script src="./Acciones.js"></script>
 </html>

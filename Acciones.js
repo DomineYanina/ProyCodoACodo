@@ -14,6 +14,18 @@ let estf5 = false;
 let estf6 = false;
 let estf7 = false;
 
+let SubS1 = document.getElementById("SubS1");
+let SubS2 = document.getElementById("SubS2");
+let SubS3 = document.getElementById("SubS3");
+
+let comidas = document.getElementById("comidas");
+let bebidas = document.getElementById("bebidas");
+let postres = document.getElementById("postres");
+
+let estC1 = false;
+let estC2 = false;
+let estC3 = false;
+
 function mostrarTexto1(){
     if(estf1==false){
         estf1=true;
@@ -81,5 +93,59 @@ function mostrarTexto7(){
     } else {
         estf7=false;
         p7.style.display="none";
+    }
+}
+
+function mostrarComidas1(){
+    if (estC1==false){
+        estC1=true;
+        SubS1.style.display="flex";
+        comidas.style.width="90%";
+        bebidas.style.display="none";
+        postres.style.display="none";
+    } else {
+        estC1=false;
+        SubS1.style.display="none";
+        comidas.style.width="25%";
+        bebidas.style.display="flex";
+        bebidas.style.flexDirection="column";
+        postres.style.display="flex";
+        postres.style.flexDirection="column";
+    }
+}
+
+function mostrarComidas2(){
+    if (estC2==false){
+        estC2=true;
+        SubS2.style.display="flex";
+        bebidas.style.width="90%";
+        postres.style.display="none";
+        comidas.style.display="none";
+    } else {
+        estC2=false;
+        SubS2.style.display="none";
+        bebidas.style.width="25%";
+        postres.style.display="flex";
+        postres.style.flexDirection="column";
+        comidas.style.display="flex";
+        comidas.style.flexDirection="column";
+    }
+}
+
+function mostrarComidas3(){
+    if (estC3==false){
+        estC3=true;
+        SubS3.style.display="flex";
+        postres.style.width="90%";
+        bebidas.style.display="none";
+        comidas.style.display="none";
+    } else {
+        estC3=false;
+        SubS3.style.display="none";
+        postres.style.width="25%";
+        bebidas.style.display="flex";
+        bebidas.style.flexDirection="column";
+        comidas.style.display="flex";
+        comidas.style.flexDirection="column";
     }
 }
