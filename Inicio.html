@@ -9,8 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link href="Estilos/Estilos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="Img/favicon.ico" rel="icon">
     <style>
-        .mySlides {display:none;}
+        .mySlides {
+            display: none;
+        }
     </style>
     <title>La Taberna de Moe</title>
 </head>
@@ -41,7 +44,7 @@
                 <img class="mySlides" src="/Img/FotosBar/7.jpg" style="width:100%">
             </div>
         </div>
-        
+
         <img class="logo" src="./Img/LogoMoe.png" alt="">
     </main>
 
@@ -52,19 +55,19 @@
     <script>
         var myIndex = 0;
         carousel();
-        
+
         function carousel() {
-          var i;
-          var x = document.getElementsByClassName("mySlides");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-          }
-          myIndex++;
-          if (myIndex > x.length) {myIndex = 1}    
-          x[myIndex-1].style.display = "block";  
-          setTimeout(carousel, 2000); // Change image every 2 seconds
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
         }
-        </script>
+    </script>
 </body>
 
 </html>
