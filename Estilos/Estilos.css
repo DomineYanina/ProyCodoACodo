@@ -14,15 +14,15 @@ body {
     align-items: center;
 }
 
-main{
-    padding-left:4vw;
+main {
+    padding-left: 4vw;
     padding-right: 4vw;
     width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 nav {
@@ -46,7 +46,7 @@ h1 {
     color: #000344
 }
 
-nav li a{
+nav li a {
     text-decoration: none;
     font-weight: bold;
     font-family: "Indie Flower", cursive;
@@ -78,7 +78,7 @@ footer {
     background-color: #1e6187;
 }
 
-.grid-container{
+.grid-container {
     display: inline-grid;
     column-width: 35%;
     column-gap: 5%;
@@ -87,73 +87,112 @@ footer {
     grid-template-columns: auto auto;
 }
 
-.logo{
+.logo {
     width: 300px;
     height: 300px;
-    position: fixed; /* Fija la posición del contenedor en relación con la ventana del navegador */
-  bottom: 0; /* Lo sitúa en la parte inferior */
-  right: 0; /* Lo sitúa en la esquina derecha */
-  z-index: 999; /* Asegura que la imagen esté por encima del footer */
+    position: fixed;
+    /* Fija la posición del contenedor en relación con la ventana del navegador */
+    bottom: 0;
+    /* Lo sitúa en la parte inferior */
+    right: 0;
+    /* Lo sitúa en la esquina derecha */
+    z-index: 999;
+    /* Asegura que la imagen esté por encima del footer */
 }
 
 /*SECTOR CARROUSEL HOME*/
 
-.slider-frame{
+.slider-frame {
     width: 80%;
     height: auto;
     margin: 10px auto 0;
     overflow: hidden;
 }
 
-.slider-frame ul{
+.slider-frame ul {
     display: flex;
     animation: slide 35s infinite linear;
     padding: 0;
     width: 700%;
 }
 
-.slider-frame li{
+.slider-frame li {
     list-style: none;
     width: 100%;
 
 }
 
-.slider-frame img{
+.slider-frame img {
     width: 100%;
 }
 
 @keyframes slide {
-    0% {margin-left: 0%;}
-    9.28% {margin-left: 0%;}
-    
-    14.28% {margin-left: -100%;}
-    23.56% {margin-left: -100%;}
-    
-    28.56% {margin-left: -200%;}
-    37.84% {margin-left: -200%;}
-    
-    42.84% {margin-left: -300%;}
-    52.14% {margin-left: -300%;}
-    
-    57.14% {margin-left: -400%;}
-    66.4% {margin-left: -400%;}
-    
-    71.4% {margin-left: -500%;}
-    80.68% {margin-left: -500%;}
-    
-    85.68% {margin-left: -600%;}
-    94.96% {margin-left: -600%;}
+    0% {
+        margin-left: 0%;
+    }
+
+    9.28% {
+        margin-left: 0%;
+    }
+
+    14.28% {
+        margin-left: -100%;
+    }
+
+    23.56% {
+        margin-left: -100%;
+    }
+
+    28.56% {
+        margin-left: -200%;
+    }
+
+    37.84% {
+        margin-left: -200%;
+    }
+
+    42.84% {
+        margin-left: -300%;
+    }
+
+    52.14% {
+        margin-left: -300%;
+    }
+
+    57.14% {
+        margin-left: -400%;
+    }
+
+    66.4% {
+        margin-left: -400%;
+    }
+
+    71.4% {
+        margin-left: -500%;
+    }
+
+    80.68% {
+        margin-left: -500%;
+    }
+
+    85.68% {
+        margin-left: -600%;
+    }
+
+    94.96% {
+        margin-left: -600%;
+    }
 }
 
 /*NUESTRA CARTA*/
 
-.titulo{
+.titulo {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.sectorComidas{
+.sectorComidas {
     width: 90%;
     height: fit-content;
     padding: 2% 2% 2% 2%;
@@ -164,22 +203,22 @@ footer {
     border-radius: 75px;
 }
 
-#comidas:hover{
+#comidas:hover {
     background-color: #4e00647a;
     color: yellow;
 }
 
-#bebidas:hover{
+#bebidas:hover {
     background-color: #4e00647a;
     color: yellow;
 }
 
-#postres:hover{
+#postres:hover {
     background-color: #4e00647a;
     color: yellow;
 }
 
-.menu{
+.menu {
     padding: 5% 5% 5% 5%;
     width: 100%;
     display: flex;
@@ -187,24 +226,27 @@ footer {
     justify-content: space-around;
 }
 
-.menuitemimg{
+.menuitemimg {
     height: 200px;
     width: auto;
 }
 
 .menuitem:hover {
-    transform: scale(1.1); /* Escala el elemento al 110% en el hover */
+    transform: scale(1.1);
+    /* Escala el elemento al 110% en el hover */
 }
 
-.subsector{
+.subsector {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.menuitem{
-    overflow: hidden; /* Para ocultar el contenido que sobresale durante el zoom */
-    transition: transform 0.3s ease; /* Transición suave para el efecto de zoom */
+.menuitem {
+    overflow: hidden;
+    /* Para ocultar el contenido que sobresale durante el zoom */
+    transition: transform 0.3s ease;
+    /* Transición suave para el efecto de zoom */
     height: 250px;
     width: auto;
     padding: 1% 1% 1% 1%;
@@ -212,7 +254,7 @@ footer {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-h4{
+h4 {
     font-family: "Amatic SC", sans-serif;
     font-weight: bold;
     font-style: normal;
@@ -222,14 +264,14 @@ h4{
     color: yellow;
 }
 
-.menuitemdesc{
-    text-align:center;
+.menuitemdesc {
+    text-align: center;
     font-size: 1.125em;
 }
 
 /*SECTOR RESERVAS*/
 
-.formulario{
+.formulario {
     margin: 0 auto;
     margin-top: 5%;
 
@@ -249,7 +291,7 @@ h4{
     align-items: center;
 }
 
-.cuerpo label{
+.cuerpo label {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -258,37 +300,38 @@ h4{
     align-items: center;
 }
 
-.desc{
+.desc {
     width: 100%;
     margin-bottom: 5%;
     text-align: center;
 }
 
-.desc p{
+.desc p {
     font-family: "Lora", serif;
     font-size: 0.955em;
     text-decoration: underline;
     color: yellow;
 }
 
-.cuerpo{
+.cuerpo {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.cuerpo p{
+.cuerpo p {
     color: white;
     font-family: "Lora", serif;
     font-size: 0.6em;
 }
 
-.formulario input{
+.formulario input,
+.formulario select {
     width: 70%;
     height: 30px;
 }
 
-.botton{
+.botton {
     width: 100px;
     height: 50px;
     margin: 0 auto;
@@ -297,7 +340,7 @@ h4{
     color: white;
 }
 
-#apartadoDeContacto{
+#apartadoDeContacto {
     margin-top: 50px;
     background-color: #dde8e8;
     height: fit-content;
@@ -313,18 +356,18 @@ h4{
     padding-bottom: 2%;
 }
 
-.ContactoBox{
+.ContactoBox {
     margin-top: 15px;
     width: 95%;
 }
 
 
-.cajaDeContacto{
+.cajaDeContacto {
     text-align: center;
     width: 90%;
 }
 
-.box{
+.box {
     padding: auto;
     margin-bottom: 15px;
     width: 100%;
@@ -333,29 +376,29 @@ h4{
     align-items: center;
 }
 
-.box input{
+.box input {
     width: 75%;
     height: 30px;
 }
 
-.textArea{
+.textArea {
     display: flex;
 }
 
 /*SECTOR SOBRE NOSOTROS*/
 
-.filaSectorNosotros{
+.filaSectorNosotros {
     display: flex;
     margin-top: 5%;
     width: 90%;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items:center;
+    align-items: center;
     justify-content: space-around;
     margin-bottom: 5%;
 }
 
-.sector{
+.sector {
     width: 25%;
     height: fit-content;
     padding: 2% 2% 2% 2%;
@@ -365,12 +408,12 @@ h4{
     border-radius: 75px;
 }
 
-.flechaAbajo{
+.flechaAbajo {
     width: 40px;
     height: 40px;
 }
 
-.tit{
+.tit {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -378,7 +421,7 @@ h4{
 }
 
 
-.tit h2{
+.tit h2 {
     font-family: "Josefin Sans", sans-serif;
     font-weight: bold;
     font-style: normal;
@@ -387,4 +430,3 @@ h4{
     text-align: center;
     color: white;
 }
-
