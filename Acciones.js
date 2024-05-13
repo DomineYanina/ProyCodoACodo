@@ -93,8 +93,8 @@ let estC3 = false;
 //     } else {
 //         estf7 = false;
 //         p7.style.display = "none";
-    }
-}
+//    }
+//}
 
 function mostrarComidas1() {
     if (estC1 == false) {
