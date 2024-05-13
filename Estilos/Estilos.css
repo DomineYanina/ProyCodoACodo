@@ -1,24 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 
 body {
     background-color: #359dd9;
     padding: 0;
     margin: 0;
-}
-
-#c02{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-
 }
 
 main{
     padding-left:4vw;
     padding-right: 4vw;
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 nav {
@@ -143,10 +147,44 @@ footer {
 
 /*NUESTRA CARTA*/
 
-.menu{
-    padding: 2% 2% 2% 2%;
+.titulo{
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sectorComidas{
+    width: 90%;
+    height: fit-content;
+    padding: 2% 2% 2% 2%;
+    background-color: #7d7d7d;
+    color: black;
+    margin-bottom: 5%;
+    box-shadow: 10px 10px;
+    border-radius: 75px;
+}
+
+#comidas:hover{
+    background-color: #4e00647a;
+    color: yellow;
+}
+
+#bebidas:hover{
+    background-color: #4e00647a;
+    color: yellow;
+}
+
+#postres:hover{
+    background-color: #4e00647a;
+    color: yellow;
+}
+
+.menu{
+    padding: 5% 5% 5% 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .menuitemimg{
@@ -174,16 +212,6 @@ footer {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.sector{
-    width: 90%;
-    height: auto;
-    padding: 2% 2% 2% 2%;
-    background-color: #4e00647a;
-    margin-bottom: 5%;
-    box-shadow: 10px 10px;
-    border-radius: 75px;
-}
-
 h4{
     font-family: "Amatic SC", sans-serif;
     font-weight: bold;
@@ -198,3 +226,165 @@ h4{
     text-align:center;
     font-size: 1.125em;
 }
+
+/*SECTOR RESERVAS*/
+
+.formulario{
+    margin: 0 auto;
+    margin-top: 5%;
+
+    background-color: #2774a0;
+    font-family: "Indie Flower", cursive;
+    font-size: 1.75em;
+    color: white;
+    width: 30%;
+    box-shadow: 10px 10px black;
+    height: fit-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 2% 2% 2%;
+    justify-items: start;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuerpo label{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desc{
+    width: 100%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.desc p{
+    font-family: "Lora", serif;
+    font-size: 0.955em;
+    text-decoration: underline;
+    color: yellow;
+}
+
+.cuerpo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cuerpo p{
+    color: white;
+    font-family: "Lora", serif;
+    font-size: 0.6em;
+}
+
+.formulario input{
+    width: 70%;
+    height: 30px;
+}
+
+.botton{
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: #637B7B;
+    color: white;
+}
+
+#apartadoDeContacto{
+    margin-top: 50px;
+    background-color: #dde8e8;
+    height: fit-content;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 6px 20px 10px black;
+    text-align: center;
+    font-size: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+.ContactoBox{
+    margin-top: 15px;
+    width: 95%;
+}
+
+
+.cajaDeContacto{
+    text-align: center;
+    width: 90%;
+}
+
+.box{
+    padding: auto;
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box input{
+    width: 75%;
+    height: 30px;
+}
+
+.textArea{
+    display: flex;
+}
+
+/*SECTOR SOBRE NOSOTROS*/
+
+.filaSectorNosotros{
+    display: flex;
+    margin-top: 5%;
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+
+.sector{
+    width: 25%;
+    height: fit-content;
+    padding: 2% 2% 2% 2%;
+    background-color: #4e00647a;
+    margin-bottom: 5%;
+    box-shadow: 10px 10px;
+    border-radius: 75px;
+}
+
+.flechaAbajo{
+    width: 40px;
+    height: 40px;
+}
+
+.tit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.tit h2{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.5em;
+    text-decoration: underline;
+    text-align: center;
+    color: white;
+}
+
