@@ -150,7 +150,16 @@ function mostrarComidas3() {
     }
 }
 
+function ocultar_festejos() {
+    lbl_festejos = document.getElementById("festejos")
+    lbl_festejos.style.display = "none"
+}
 
+function mostrar_festejos() {
+    alert("SD2")
+    lbl_festejos = document.getElementById("festejos")
+    lbl_festejos.style.display = "flex"
+}
 
 class PH {
     constructor(pid) {

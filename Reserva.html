@@ -43,7 +43,7 @@
             </label>
             <label>
                 <p>Cantidad:</p>
-                <select name="" id="">
+                <!-- <select name="" id="">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -56,13 +56,37 @@
                     <option value="10">10</option>
                     <option value="11">11</option>
                     <option value="12">12</option>
-                </select>
+                </select>-->
+                <input type="number" name="npersonas" placeholder="Número de personas">
             </label>
+
             <label>
                 <p>Fecha:</p>
                 <input type="datetime-local" name="message" placeholder="mensaje">
             </label>
+            <label>
+                <p>Ubicación:</p>
+                <select name="Ubicación">
+                    <option value="Adentro">Adentro</option>
+                    <option value="Afuera">Balcón</option>
+                </select>
+            </label>
+            <label>
+                <p>¿Festeja una ocasión especial?</p>
+                <label for="Sí">Sí</label>
+                <input type="radio" name="Festejo" value=true onclick="mostrar_festejos()">
+                <label for="No">No</label>
+                <input type="radio" name="Festejo" value=false onclick="ocultar_festejos()">
 
+            </label>
+            <label id="festejos">
+                <select name="" id="">
+                    <option value="">Aniversario</option>
+                    <option value="">Cumpleaños</option>
+                    <option value="">Graduación</option>
+                    <option value="">Otros</option>
+                </select>
+            </label>
             <!-- lo que escriba se lo envia al free -->
             <button class="botton" type="submit">Enviar</button>
             <!--no me deja hacer un cambio lm jijiji-->
@@ -72,6 +96,7 @@
 
     </footer>
     <img class="logo" src="./Img/LogoMoe.png" alt="">
+    <script src="Acciones.js"></script>
 </body>
 
 </html>
