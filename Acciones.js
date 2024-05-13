@@ -156,7 +156,7 @@ function ocultar_festejos() {
 }
 
 function mostrar_festejos() {
-    alert("SD2")
+
     lbl_festejos = document.getElementById("festejos")
     lbl_festejos.style.display = "flex"
 }
