@@ -93,8 +93,13 @@
 //     } else {
 //         estf7 = false;
 //         p7.style.display = "none";
+<<<<<<< HEAD
 //     }
 // }
+=======
+//    }
+//}
+>>>>>>> aaea016f2a8429b5feecaad3b2c680b36148ab56
 
 // function mostrarComidas1() {
 //     if (estC1 == false) {
@@ -150,7 +155,16 @@
 //     }
 // }
 
+function ocultar_festejos() {
+    lbl_festejos = document.getElementById("festejos")
+    lbl_festejos.style.display = "none"
+}
 
+function mostrar_festejos() {
+
+    lbl_festejos = document.getElementById("festejos")
+    lbl_festejos.style.display = "flex"
+}
 
 class PH {
     constructor(pid) {
