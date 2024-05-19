@@ -82,9 +82,17 @@ footer {
 .footer-contenedor {
 
     display: flex;
-    gap: 30%;
-    justify-content: space-between;
+    gap: 2%;
+    justify-content: flex-start;
 
+}
+
+.footer-contenido {
+    border-right: 1px solid white;
+    width: 25vw;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: center;
 }
 
 footer iframe {
