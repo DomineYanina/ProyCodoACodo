@@ -8,22 +8,13 @@ body {
     background-color: #359dd9;
     padding: 0;
     margin: 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-main {
-    padding-left: 4vw;
-    padding-right: 4vw;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
 
 nav {
     position: relative;
@@ -43,7 +34,7 @@ ul li {
 }
 
 h1 {
-    color: #000344
+    color: #000344;
 }
 
 nav li a {
@@ -496,6 +487,9 @@ h4 {
         color: #ffeb00;
         font-size: 2em;
     }
+    h4 {
+        font-size: 2.5em;
+    }
 }
 
 @media only screen and (max-width: 800px){
@@ -522,7 +516,12 @@ h4 {
         color: #ffeb00;
         font-size: 1.75em;
     }
-    
+    h4 {
+        font-size: 2em;
+    }
+    .sectorComidas {
+        border-radius: 55px;
+    }
 }
 
 @media only screen and (max-width: 600px){
@@ -552,6 +551,17 @@ h4 {
     .footer-contenedor {
         width: calc(100% - 120px);
     }
+    h4 {
+        font-size: 1.75em;
+    }
+    .sectorComidas {
+        border-radius: 45px;
+        width: 45%;
+    }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media only screen and (max-width: 500px){
@@ -575,6 +585,13 @@ h4 {
     .footer-contenedor {
         width: calc(100% - 90px);
     }
+    h4 {
+        font-size: 1.5em;
+    }
+    .sectorComidas {
+        border-radius: 35px;
+        width: 50%;
+    }
 }
 @media only screen and (max-width: 400px){
     .formulario{
@@ -596,6 +613,13 @@ h4 {
     }
     .footer-contenedor {
         width: calc(100% - 75px);
+    }
+    h4 {
+        font-size: 1.25em;
+    }
+    .sectorComidas {
+        border-radius: 25px;
+        width: 50%;
     }
 }
 /*SECTOR SOBRE NOSOTROS*/
