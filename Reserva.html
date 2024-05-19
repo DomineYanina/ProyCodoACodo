@@ -71,13 +71,14 @@
                     <option value="Afuera">Balcón</option>
                 </select>
             </label>
-            <label>
+            <label class="ocaEsp">
                 <p>¿Festeja una ocasión especial?</p>
-                <label for="Sí">Sí</label>
-                <input type="radio" name="Festejo" value=true onclick="mostrar_festejos()">
-                <label for="No">No</label>
-                <input type="radio" name="Festejo" value=false onclick="ocultar_festejos()">
-
+                <div class="secOcaEsp">
+                    <label for="Sí">Sí</label>
+                    <input type="radio" name="Festejo" value=true onclick="mostrar_festejos()">
+                    <label for="No">No</label>
+                    <input type="radio" name="Festejo" value=false onclick="ocultar_festejos()">
+                </div>
             </label>
             <label id="festejos">
                 <select name="" id="">

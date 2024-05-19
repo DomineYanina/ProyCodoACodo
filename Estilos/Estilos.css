@@ -306,7 +306,7 @@ h4 {
 .formulario {
     margin: 0 auto;
     margin-top: 5%;
-margin-bottom: 180px;
+    margin-bottom: 180px;
     background-color: #2774a0;
     font-family: "Indie Flower", cursive;
     font-size: 1.75em;
@@ -422,6 +422,25 @@ margin-bottom: 180px;
 
 .textArea {
     display: flex;
+}
+
+.ocaEsp{
+    width: 100%;
+    align-items: center;
+}
+
+.secOcaEsp{
+    width: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.secOcaEsp label{
+    font-size: 20px;
+}
+
+.ocaEsp p{
+
 }
 
 /*SECTOR SOBRE NOSOTROS*/
