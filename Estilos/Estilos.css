@@ -70,7 +70,7 @@ footer {
     background-color: #1e6187;
 }
 
-.footerBody{
+.footerBody {
     background-color: #1e6187;
     padding: 0;
     margin: 0;
@@ -87,7 +87,7 @@ footer {
     display: flex;
     gap: 2%;
     flex-direction: row;
-    justify-content:start;
+    justify-content: start;
     width: calc(100% - 300px);
 }
 
@@ -101,14 +101,14 @@ footer {
     align-content: center;
 }
 
-.contRedes{
+.contRedes {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
 }
 
-.footer-contenido p{
+.footer-contenido p {
     font-size: 1.1em;
 }
 
@@ -244,7 +244,12 @@ footer iframe {
     border-radius: 75px;
 }
 
-#comidas:hover {
+.sectorComidas:hover {
+    background-color: #4e00647a;
+    color: yellow;
+}
+
+/* #comidas:hover {
     background-color: #4e00647a;
     color: yellow;
 }
@@ -257,7 +262,7 @@ footer iframe {
 #postres:hover {
     background-color: #4e00647a;
     color: yellow;
-}
+} */
 
 .menu {
     padding: 5% 5% 5% 5%;
@@ -440,23 +445,23 @@ h4 {
     display: flex;
 }
 
-.ocaEsp{
+.ocaEsp {
     width: 100%;
     align-items: center;
 }
 
-.secOcaEsp{
+.secOcaEsp {
     width: 40%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
 }
 
-.secOcaEsp label{
+.secOcaEsp label {
     font-size: 20px;
 }
 
-.secOcaEspSi{
+.secOcaEspSi {
     width: 30%;
     height: min-content;
     display: flex;
@@ -465,163 +470,202 @@ h4 {
     align-content: center;
 }
 
-@media only screen and (max-width: 1100px){
-    .formulario{
+@media only screen and (max-width: 1100px) {
+    .formulario {
         width: 40%;
     }
-    .logo{
+
+    .logo {
         width: 200px;
         height: auto;
     }
-    
+
     .footer-contenedor {
         width: calc(100% - 200px);
     }
-    .footer-contenido p{
+
+    .footer-contenido p {
         font-size: 1em;
-    }    
+    }
+
     nav li a {
         font-size: 1.55em;
     }
+
     nav li a:hover {
         color: #ffeb00;
         font-size: 2em;
     }
+
     h4 {
         font-size: 2.5em;
     }
 }
 
-@media only screen and (max-width: 800px){
-    .formulario{
+@media only screen and (max-width: 800px) {
+    .formulario {
         width: 50%;
     }
-    .desc p{
+
+    .desc p {
         font-size: 0.85em;
     }
-    .logo{
+
+    .logo {
         width: 150px;
         height: auto;
     }
+
     .footer-contenedor {
         width: calc(100% - 150px);
     }
-    .footer-contenido p{
+
+    .footer-contenido p {
         font-size: 0.9em;
     }
+
     nav li a {
         font-size: 1.35em;
     }
+
     nav li a:hover {
         color: #ffeb00;
         font-size: 1.75em;
     }
+
     h4 {
         font-size: 2em;
     }
+
     .sectorComidas {
         border-radius: 55px;
     }
 }
 
-@media only screen and (max-width: 600px){
-    .formulario{
+@media only screen and (max-width: 600px) {
+    .formulario {
         width: 60%;
     }
-    .cuerpo p{
+
+    .cuerpo p {
         font-size: 0.5em;
     }
-    .desc p{
+
+    .desc p {
         font-size: 0.80em;
     }
-    .footer-contenido p{
+
+    .footer-contenido p {
         font-size: 0.7em;
     }
+
     nav li a {
         font-size: 1.15em;
     }
+
     nav li a:hover {
         color: #ffeb00;
         font-size: 1.55em;
     }
-    .logo{
+
+    .logo {
         width: 120px;
         height: auto;
     }
+
     .footer-contenedor {
         width: calc(100% - 120px);
     }
+
     h4 {
         font-size: 1.75em;
     }
+
     .sectorComidas {
         border-radius: 45px;
         width: 45%;
     }
+
     .menu {
         flex-direction: column;
         align-items: center;
     }
 }
 
-@media only screen and (max-width: 500px){
-    .formulario{
+@media only screen and (max-width: 500px) {
+    .formulario {
         width: 70%;
     }
-    .footer-contenido p{
+
+    .footer-contenido p {
         font-size: 0.6em;
     }
+
     nav li a {
         font-size: 1.05em;
     }
+
     nav li a:hover {
         color: #ffeb00;
         font-size: 1.25em;
     }
-    .logo{
+
+    .logo {
         width: 90px;
         height: auto;
     }
+
     .footer-contenedor {
         width: calc(100% - 90px);
     }
+
     h4 {
         font-size: 1.5em;
     }
+
     .sectorComidas {
         border-radius: 35px;
         width: 50%;
     }
 }
-@media only screen and (max-width: 400px){
-    .formulario{
+
+@media only screen and (max-width: 400px) {
+    .formulario {
         width: 90%;
     }
-    .footer-contenido p{
+
+    .footer-contenido p {
         font-size: 0.5em;
     }
+
     nav li a {
         font-size: 1em;
     }
+
     nav li a:hover {
         color: #ffeb00;
         font-size: 1em;
     }
-    .logo{
+
+    .logo {
         width: 75px;
         height: auto;
     }
+
     .footer-contenedor {
         width: calc(100% - 75px);
     }
+
     h4 {
         font-size: 1.25em;
     }
+
     .sectorComidas {
         border-radius: 25px;
         width: 50%;
     }
 }
+
 /*SECTOR SOBRE NOSOTROS*/
 
 .filaSectorNosotros {

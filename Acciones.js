@@ -40,6 +40,8 @@ class Platos {
             if (plat[0] === this.plato) {
                 if (plat[0].style.width == "25%") {
                     plat[0].style.width = "90%";
+                    plat[0].style.backgroundColor = "#4e00647a";
+                    plat[0].style.color = "black";
                     plat[1].style.display = "flex";
                     for (let plat2 of this.platos) {
                         if (plat2[0] !== this.plato) {
@@ -49,6 +51,8 @@ class Platos {
                     }
                 } else {
                     plat[0].style.width = "25%";
+                    plat[0].style.backgroundColor = ""
+                    plat[0].style.color = "";
                     plat[1].style.display = "none";
                     for (let plat2 of this.platos) {
                         if (plat2[0] !== this.plato) {
