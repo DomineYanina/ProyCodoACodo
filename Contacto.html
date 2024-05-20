@@ -45,8 +45,8 @@
                     <input type="text" id="txtNombre" class="form-control" name="name" placeholder="Nombre">
                 </label>
                 <label>
-                    <p>E-mail</p>
-                    <input type="email" id="txtEmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <p>E-mail:</p>
+                    <input type="email" id="txtEmail" class="form-control" placeholder="Enter email">
                 </label>
                 <label>
                     <p>Teléfono:</p>
@@ -54,13 +54,12 @@
                 </label>
                 <label>
                     <p>Asunto:</p>
-                    <input type="text" id="txtAsunto"  class="form-control" name="message" placeholder="Cantidad de personas">
+                    <input type="text" id="txtAsunto"  class="form-control" name="message" placeholder="Asunto">
                 </label>
                 <label>
                     <p>Mensaje:</p>
                     <textarea class="form-control" id="txtMensaje" rows="3"></textarea>
                 </label>
-
 
                 <button class="btn btn-outline-info" id="enviarSolicitudContacto" type="submit" style="display: none;">Enviar</button>
             </div>
@@ -88,26 +87,38 @@
             };
 
             const checkFields = () => {
-                if (nombre.value.trim() && email.value.trim() && telefono.value.trim() && asunto.value.trim() && mensaje.value.trim()) {
-                    enviarBtn.style.display = 'block';
-                } else {
-                    enviarBtn.style.display = 'none';
-                }
+                const allValid = [nombre, email, telefono, asunto, mensaje].every(field => field.classList.contains('is-valid'));
+                enviarBtn.style.display = allValid ? 'block' : 'none';
             };
 
-            nombre.addEventListener('input', checkFields);
-            email.addEventListener('input', checkFields);
-            telefono.addEventListener('input', checkFields);
-            asunto.addEventListener('input', checkFields);
-            mensaje.addEventListener('input', checkFields);
+            const validateField = (field, validationFn) => {
+                field.addEventListener('input', () => {
+                    if (validationFn(field.value)) {
+                        field.classList.remove('is-invalid');
+                        field.classList.add('is-valid');
+                    } else {
+                        field.classList.remove('is-valid');
+                        field.classList.add('is-invalid');
+                    }
+                    checkFields();
+                });
+            };
+
+            const isValidText = (text) => text.trim().length > 0;
+            const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            const isValidPhone = (phone) => /^\d{10}$/.test(phone);
+
+            validateField(nombre, isValidText);
+            validateField(email, isValidEmail);
+            validateField(telefono, isValidPhone);
+            validateField(asunto, isValidText);
+            validateField(mensaje, isValidText);
 
             // Hide the button initially and clear fields on page load
             enviarBtn.style.display = 'none';
             clearFields();
         });
-
     </script>
-    
 </body>
 
 </html>
