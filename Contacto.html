@@ -78,6 +78,15 @@
             const mensaje = document.getElementById('txtMensaje');
             const enviarBtn = document.getElementById('enviarSolicitudContacto');
 
+            // Clear fields on page load to ensure placeholders are respected
+            const clearFields = () => {
+                nombre.value = '';
+                email.value = '';
+                telefono.value = '';
+                asunto.value = '';
+                mensaje.value = '';
+            };
+
             const checkFields = () => {
                 if (nombre.value.trim() && email.value.trim() && telefono.value.trim() && asunto.value.trim() && mensaje.value.trim()) {
                     enviarBtn.style.display = 'block';
@@ -92,9 +101,11 @@
             asunto.addEventListener('input', checkFields);
             mensaje.addEventListener('input', checkFields);
 
-            // Hide the button initially
+            // Hide the button initially and clear fields on page load
             enviarBtn.style.display = 'none';
+            clearFields();
         });
+
     </script>
     
 </body>
