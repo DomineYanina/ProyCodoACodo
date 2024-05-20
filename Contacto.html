@@ -4,21 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="Estilos/Estilos.css" rel="stylesheet">
+    <link href="Estilos/bootstrap.css" rel="stylesheet">
     <link href="Img/favicon.ico" rel="icon">
     <title>Contacto</title>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="Inicio.html">Inicio</a></li>
-            <li><a href="Menu.html">Menu</a></li>
-            <li><a href="Reserva.html">Reservas</a></li>
-            <li><a href="Contacto.html">Contacto</a></li>
-            <li><a href="Historia.html">Sobre nosotros</a></li>
-        </ul>
-    </nav>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="Inicio.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Menu.html">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Reserva.html">Reservas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="Contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Historia.html">Sobre nosotros</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
     <main>
         <section class="formulario">
@@ -28,37 +42,61 @@
             <div class="cuerpo">
                 <label>
                     <p>Nombre:</p>
-                    <input type="text" name="name" placeholder="Nombre">
+                    <input type="text" id="txtNombre" class="form-control" name="name" placeholder="Nombre">
                 </label>
                 <label>
-                    <p>E-Mail:</p>
-                    <input type="email" name="email" placeholder="E-Mail">
+                    <p>E-mail</p>
+                    <input type="email" id="txtEmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                 </label>
                 <label>
                     <p>Teléfono:</p>
-                    <input type="tel" name="number" placeholder="Teléfono">
+                    <input type="tel" id="txtTelefono" class="form-control" name="number" placeholder="Teléfono">
                 </label>
                 <label>
                     <p>Asunto:</p>
-                    <input type="text" name="message" placeholder="Cantidad de personas">
+                    <input type="text" id="txtAsunto"  class="form-control" name="message" placeholder="Cantidad de personas">
                 </label>
                 <label>
                     <p>Mensaje:</p>
-                    <textarea cols="38" , rows="7">Escriba su mensaje...</textarea>
+                    <textarea class="form-control" id="txtMensaje" rows="3"></textarea>
                 </label>
 
 
-                <button class="botton" type="submit">Enviar</button>
+                <button class="btn btn-outline-info" id="enviarSolicitudContacto" type="submit" style="display: none;">Enviar</button>
             </div>
 
         </section>
         <img class="logo" src="./Img/LogoMoe.png" alt="">
     </main>
+    <iframe src="footer.html" frameborder="0"></iframe>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const nombre = document.getElementById('txtNombre');
+            const email = document.getElementById('txtEmail');
+            const telefono = document.getElementById('txtTelefono');
+            const asunto = document.getElementById('txtAsunto');
+            const mensaje = document.getElementById('txtMensaje');
+            const enviarBtn = document.getElementById('enviarSolicitudContacto');
 
-    <footer>
-        <iframe src="footer.html" frameborder="0"></iframe>
-    </footer>
+            const checkFields = () => {
+                if (nombre.value.trim() && email.value.trim() && telefono.value.trim() && asunto.value.trim() && mensaje.value.trim()) {
+                    enviarBtn.style.display = 'block';
+                } else {
+                    enviarBtn.style.display = 'none';
+                }
+            };
 
+            nombre.addEventListener('input', checkFields);
+            email.addEventListener('input', checkFields);
+            telefono.addEventListener('input', checkFields);
+            asunto.addEventListener('input', checkFields);
+            mensaje.addEventListener('input', checkFields);
+
+            // Hide the button initially
+            enviarBtn.style.display = 'none';
+        });
+    </script>
+    
 </body>
 
 </html>
