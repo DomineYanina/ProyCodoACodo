@@ -4,13 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Estilos/bootstrap.css" rel="stylesheet">
     <link href="Estilos/Estilos.css" rel="stylesheet">
     <link href="Img/favicon.ico" rel="icon">
     <title>Nuestra Carta</title>
 </head>
 
 <body>
-    <nav>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Reserva.html">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Historia.html">Sobre nosotros</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--<nav>
         <ul>
             <li><a href="Inicio.html">Inicio</a></li>
             <li><a href="Menu.html">Menu</a></li>
@@ -18,7 +42,7 @@
             <li><a href="Contacto.html">Contacto</a></li>
             <li><a href="Historia.html">Sobre nosotros</a></li>
         </ul>
-    </nav>
+    </nav>-->
     <main>
         <section class="menu">
             <article class="sectorComidas" id="comidas" style="width: 25%;">
@@ -81,7 +105,8 @@
             <article class="sectorComidas" id="bebidas" style="width: 25%;">
                 <div class="titulo">
                     <h4>Postres</h4>
-                    <img src="./Img/flecha-hacia-abajo.png" alt="" id="FlCo2" class="flechaAbajo" onclick="bebb.mostrar()">
+                    <img src="./Img/flecha-hacia-abajo.png" alt="" id="FlCo2" class="flechaAbajo"
+                        onclick="bebb.mostrar()">
                 </div>
                 <div class="subsector" id="SubS2" style="display: none;">
                     <div class="menuitem">
@@ -121,7 +146,8 @@
             <article class="sectorComidas" id="postres" style="width: 25%;">
                 <div class="titulo">
                     <h4>Bebidas</h4>
-                    <img src="./Img/flecha-hacia-abajo.png" alt="" id="FlCo3" class="flechaAbajo" onclick="poss.mostrar()">
+                    <img src="./Img/flecha-hacia-abajo.png" alt="" id="FlCo3" class="flechaAbajo"
+                        onclick="poss.mostrar()">
                 </div>
                 <div class="subsector" id="SubS3" style="display: none;">
                     <div class="menuitem">
