@@ -1,11 +1,11 @@
 function ocultar_festejos() {
-    lbl_festejos = document.getElementById("festejos")
+    lbl_festejos = document.getElementById("festejos");
     lbl_festejos.style.display = "none"
 }
 
 function mostrar_festejos() {
 
-    lbl_festejos = document.getElementById("festejos")
+    lbl_festejos = document.getElementById("festejos");
     lbl_festejos.style.display = "flex"
 }
 

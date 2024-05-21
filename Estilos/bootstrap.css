@@ -2096,7 +2096,6 @@ progress {
 }
 .form-label {
   margin-bottom: 0.5rem;
-  font-weight: 600;
 }
 
 .col-form-label {
@@ -2324,7 +2323,7 @@ textarea.form-control-lg {
   --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%237b8ab8' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
   display: block;
   width: 100%;
-  padding: 1rem 4.5rem 1rem 1.5rem;
+  padding: 0.5rem 1.5rem; /* Ajusta el padding vertical según sea necesario */
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2341,7 +2340,11 @@ textarea.form-control-lg {
   border-radius: var(--bs-border-radius);
   box-shadow: inset 2px 2px 8px rgba(55, 94, 148, 0.3), inset -3px -2px 5px rgba(255, 255, 255, 0.8);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
 }
+
+
 @media (prefers-reduced-motion: reduce) {
   .form-select {
     transition: none;
@@ -12866,14 +12869,23 @@ textarea.form-control-lg {
   color: white;
   font-family: "Lora", serif;
   font-size: 0.6em;
+  max-width: 60%;
 }
 
 .formulario input,
 .formulario select,
 .formualrio textarea {
   width: 70%;
-  height: 30px;
+  height: 40px;
+}
+
+.formulario input,
+.formualrio textarea{
   font-size: 0.5em;
+}
+
+.formulario select{
+  font-size: 0.4em;
 }
 
 .logo {
@@ -12900,7 +12912,6 @@ iframe {
 }
 
 /*SECTOR SOBRE NOSOTROS*/
-/*agrege lo que estaba en el archivo estilos.css para ver la diferencia entre bootstrap y el que teniamo antes*/
 
 .filaSectorNosotros {
   display: flex;
@@ -12944,4 +12955,30 @@ iframe {
   text-decoration: underline;
   text-align: center;
   color: white;
+}
+
+.ocaEsp {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.secOcaEsp {
+  width: 40%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.secOcaEsp label {
+  font-size: 20px;
+}
+
+.secOcaEspSi {
+  width: 30%;
+  height: min-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
 }
