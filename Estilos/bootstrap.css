@@ -15002,3 +15002,27 @@ iframe {
   align-items: center;
   align-content: center;
 }
+
+.sectorComidas {
+  width: 90%;
+  height: fit-content;
+  padding: 2% 2% 2% 2%;
+  background-color: #7d7d7d;
+  color: black;
+  margin-bottom: 5%;
+  box-shadow: 10px 10px;
+  border-radius: 75px;
+}
+
+.sectorComidas:hover {
+  background-color: #4e00647a;
+  color: yellow;
+}
+
+main{
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  min-height: 100vh;
+}

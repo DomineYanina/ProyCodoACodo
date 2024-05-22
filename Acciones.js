@@ -39,7 +39,7 @@ class Platos {
         for (let plat of this.platos) {
             if (plat[0] === this.plato) {
                 if (plat[0].style.width == "25%") {
-                    plat[0].style.width = "90%";
+                    plat[0].style.width = "95%";
                     plat[0].style.backgroundColor = "#4e00647a";
                     plat[0].style.color = "yellow";
                     plat[1].style.display = "flex";
