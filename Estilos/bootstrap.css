@@ -14961,15 +14961,6 @@ iframe {
   margin-bottom: 7%;
 }
 
-.sector {
-  width: 25%;
-  height: fit-content;
-  padding: 2% 2% 2% 2%;
-  background-color: #4e00647a;
-  margin-bottom: 5%;
-  box-shadow: 10px 10px;
-  border-radius: 75px;
-}
 
 .flechaAbajo {
   width: 50px;
@@ -15029,6 +15020,7 @@ iframe {
   margin-bottom: 5%;
   box-shadow: 10px 10px;
   border-radius: 75px;
+  transition: width 2s, height 4s, background-color 2s, box-shadow 2s;
 }
 
 .sectorComidas:hover {
@@ -15042,4 +15034,94 @@ main{
   align-items: center; 
   justify-content: center; 
   min-height: 100vh;
+}
+
+.menuitemdesc {
+  text-align: center;
+  font-size: 1.125em;
+}
+
+
+.menuitemimg {
+  height: 200px;
+  width: auto;
+}
+
+.menuitem:hover {
+  transform: scale(1.1);
+  /* Escala el elemento al 110% en el hover */
+}
+
+.menuitem {
+  overflow: hidden;
+  /* Para ocultar el contenido que sobresale durante el zoom */
+  transition: transform 0.3s ease;
+  /* Transición suave para el efecto de zoom */
+  height: 290px;
+  width: auto;
+  padding: 1% 1% 1% 1%;
+  margin-bottom: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.precio{
+  text-align: center;
+  font-size: 0.9em;
+  opacity: 0.5;
+}
+
+/*SECTOR SOBRE NOSOTROS*/
+
+.filaSectorNosotros {
+  display: flex;
+  margin-top: 5%;
+  width: 90%;
+  gap: 10%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
+
+
+.flechaAbajo {
+  width: 40px;
+  height: 40px;
+}
+
+.tit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tit h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.5em;
+  text-decoration: underline;
+  text-align: center;
+  color: white;
+}
+
+.sector {
+  width: 25%;
+  height: 110px; /* Valor inicial fijo */
+  padding: 2%;
+  background-color: #7d7d7d;
+  margin-bottom: 5%;
+  color: white;
+  box-shadow: 10px 10px black;
+  border-radius: 75px;
+  transition: width 2s, height 4s, background-color 2s, box-shadow 2s;
+}
+
+.sector:hover {
+  width: 29%;
+  padding: 2% 2% 2% 2%;
+  background-color: #4e00647a;
+  box-shadow: 10px 10px yellow;
 }

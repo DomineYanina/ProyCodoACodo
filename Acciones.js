@@ -17,8 +17,12 @@ class PH {
     mostrar() {
         if (this.p.style.display == "flex") {
             this.p.style.display = "none";
+            this.p.style.height = "110px";//Esto debería hacerse sobre el elemento de clase sector que corresponda según en cual estoy haciendo click, no sobre la p
+            //Acá el elemento de clase sector que corresponda según el cual estoy haciendo click, debería volver a ajustarse para que vuelva al 25%
         } else {
             this.p.style.display = "flex";
+            this.p.style.height = "fit-content"; //Esto debería hacerse sobre el elemento de clase sector que corresponda según en cual estoy haciendo click, no sobre la p
+            //También sobre el elemento de clase sector que corresponda según el cual estoy haciendo click, debería ajustarsele el width para que pase a ser del 29%, en vez del 25%
             this.p.style.backgroundColor = rgba(140, 0, 0, 0);
         }
     }
