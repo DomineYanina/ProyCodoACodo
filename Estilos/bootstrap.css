@@ -586,13 +586,6 @@ output {
   display: inline-block;
 }
 
-iframe {
-  border: 0;
-  width: 100%;
-  bottom: 0;
-  position: fixed;
-}
-
 summary {
   display: list-item;
   cursor: pointer;
@@ -12905,6 +12898,8 @@ iframe {
   background-color: #1e6187;
   width: 100%;
   overflow: hidden;
+  border: 0;
+  bottom: 0;
 }
 
 .active{

@@ -78,11 +78,11 @@
                 <section class="secOcaEsp">
                     <div class="secOcaEspSi">
                         <label for="Sí">Sí</label>
-                        <input type="radio" name="Festejo" value="true" onclick="mostrar_festejos()">
+                        <input id="radioSi" type="radio" name="Festejo" value="true" onclick="mostrar_festejos()">
                     </div>
                     <div class="secOcaEspSi">
                         <label for="No">No</label>
-                        <input type="radio" name="Festejo" value="false" onclick="ocultar_festejos()">
+                        <input id="radioNo" type="radio" name="Festejo" value="false" onclick="ocultar_festejos()">
                     </div>
                 </section>
                 
@@ -100,9 +100,8 @@
                     style="display: none;">Enviar</button>
         </div>
     </form>
-    <footer>
         <iframe src="footer.html" frameborder="0"></iframe>
-    </footer>
+    
     <img class="logo" src="./Img/LogoMoe.png" alt="">
     <script src="Acciones.js"></script>
     <script>
@@ -110,21 +109,27 @@
             const nombre = document.getElementById('Nombre');
             const email = document.getElementById('Email');
             const telefono = document.getElementById('Telefono');
-            const asunto = document.getElementById('Apellido');
-            const mensaje = document.getElementById('NumPersonas');
-            const enviarBtn = document.getElementById('enviarSolicitudContacto');
+            const apellido = document.getElementById('Apellido');
+            const numPersonas = document.getElementById('NumPersonas');
+            const festejos = document.getElementById('festejos');
+            const Ubicacion = document.getElementById('Ubicacion');
+            const seleccionFechaReserva = document.getElementById('seleccionFechaReserva');
+            const enviarBtn = document.getElementById('enviarReserva');
 
             // Clear fields on page load to ensure placeholders are respected
             const clearFields = () => {
                 nombre.value = '';
                 email.value = '';
                 telefono.value = '';
-                asunto.value = '';
-                mensaje.value = '';
+                apellido.value = '';
+                numPersonas.value = '';
+                festejos.value = '';
+                Ubicacion.value = '';
+                seleccionFechaReserva.value = '';
             };
 
             const checkFields = () => {
-                const allValid = [nombre, email, telefono, asunto, mensaje].every(field => field.classList.contains('is-valid'));
+                const allValid = [nombre, email, telefono, apellido, numPersonas, seleccionFechaReserva].every(field => field.classList.contains('is-valid'));
                 enviarBtn.style.display = allValid ? 'block' : 'none';
             };
 
@@ -148,7 +153,7 @@
             validateField(nombre, isValidText);
             validateField(email, isValidEmail);
             validateField(telefono, isValidPhone);
-            validateField(asunto, isValidText);
+            validateField(apellido, isValidText);
             validateField(mensaje, isValidText);
 
             // Hide the button initially and clear fields on page load

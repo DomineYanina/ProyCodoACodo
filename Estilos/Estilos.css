@@ -122,10 +122,12 @@ footer {
     font-size: 1.1em;
 }
 
-footer iframe {
+iframe{
     background-color: #1e6187;
     width: 100%;
     overflow: hidden;
+    border: 0;
+    
 }
 
 .grid-container {
