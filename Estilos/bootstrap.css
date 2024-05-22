@@ -290,9 +290,9 @@ h4,
 
   h4,
   .h4 {
-    font-size: 3rem;
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
+    font-weight: bold;
   }
 }
 
@@ -3474,7 +3474,12 @@ textarea.form-control.is-invalid {
   border-radius: var(--bs-btn-border-radius);
   background-color: var(--bs-btn-bg);
   box-shadow: var(--bs-btn-box-shadow);
+  width: 100%;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn:hover{
+
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -15030,14 +15035,6 @@ iframe {
   color: yellow;
 }
 
-main{
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: center; 
-  min-height: 100vh;
-}
-
 .menuitemdesc {
   text-align: center;
   font-size: 1.125em;
@@ -15049,9 +15046,31 @@ main{
   width: auto;
 }
 
+.homeitem:hover{
+  transform: scale(1.1);
+}
+
 .menuitem:hover {
   transform: scale(1.1);
   /* Escala el elemento al 110% en el hover */
+}
+
+.homeitem{
+  /* Para ocultar el contenido que sobresale durante el zoom */
+  transition: transform 0.3s ease;
+  /* Transición suave para el efecto de zoom */
+  height: 100%;
+  width: 22.5%;
+  padding: 1% 1% 1% 1%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.homeitem h3{
+  color: yellow;
+}
+
+.homeitem p{
+  color: white;
 }
 
 .menuitem {
@@ -15128,17 +15147,3 @@ main{
   box-shadow: 10px 10px yellow;
 }
 
-.patron{
-  background-image: url(../Img/istockphoto-1251213570-612x612.jpg);
-  background-repeat: repeat-x;
-  height: 1000px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-}
-
-.patron h2{
-  text-align: center;
-  margin-top: 15%;
-}

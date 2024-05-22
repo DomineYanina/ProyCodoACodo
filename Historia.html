@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,15 @@
     <link href="Estilos/Estilos.css" rel="stylesheet">
     <link href="Img/favicon.ico" rel="icon">
     <title>Nuestra historia</title>
+    <style>
+        main{
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            min-height: 80vh;
+        }
+    </style>
 </head>
 
 <body>
@@ -37,7 +46,7 @@
     </nav>
     <main>
 
-        <section class="filaSectorNosotros">
+        <div class="filaSectorNosotros">
             <article class="sectorRetraido" id="1">
                 <div class="tit">
                     <h2>Sobre Nosotros</h2>
@@ -145,14 +154,11 @@
 
                     Correo Electrónico: info@latabernademoe.com.ar </p>
             </article>
-        </section>
-        <!-- <button onclick="eh1.ocultar_todos()">Ocultar todos</button>
-        <button onclick="eh1.colapsar_todos()">Colapsar todos</button>
-        <button onclick="eh1.expandir()">Expandir 1</button> -->
+        </div>
     </main>
     <img class="logo" src="./Img/LogoMoe.png" alt="">
 
-    <iframe src="footer.html" frameborder="0"></iframe>
+    <iframe src="footer.html"></iframe>
     <script src="/Acciones.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
