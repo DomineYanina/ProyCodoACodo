@@ -14837,7 +14837,7 @@ fieldset:disabled .btn {
   font-family: "Indie Flower", cursive;
   font-size: 1.75em;
   color: white;
-  width: 30%;
+  width: 35%;
   box-shadow: 10px 10px black;
   height: fit-content;
   border-radius: 10px;
@@ -14872,7 +14872,7 @@ fieldset:disabled .btn {
 
 .desc p {
   font-family: "Lora", serif;
-  font-size: 0.955em;
+  font-size: 0.76em;
   text-decoration: underline;
   color: yellow;
 }
@@ -14886,7 +14886,7 @@ fieldset:disabled .btn {
 .cuerpo p {
   color: white;
   font-family: "Lora", serif;
-  font-size: 0.6em;
+  font-size: 0.5em;
   max-width: 60%;
 }
 
@@ -14894,12 +14894,12 @@ fieldset:disabled .btn {
 .formulario select,
 .formualrio textarea {
   width: 70%;
-  height: 40px;
+  height: 20px;
 }
 
 .formulario input,
 .formualrio textarea {
-  font-size: 0.5em;
+  font-size: 0.45em;
 }
 
 .formulario select {
@@ -14991,7 +14991,7 @@ iframe {
 }
 
 .secOcaEsp label {
-  font-size: 20px;
+  font-size: 0.5em;
 }
 
 .secOcaEspSi {
