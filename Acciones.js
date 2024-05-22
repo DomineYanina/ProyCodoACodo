@@ -9,20 +9,20 @@ function mostrar_festejos() {
     lbl_festejos.style.display = "flex"
 }
 
-class PH {
-    constructor(pid) {
-        this.p = document.getElementById(pid);
-    }
+// class PH {
+//     constructor(pid) {
+//         this.p = document.getElementById(pid);
+//     }
 
-    mostrar() {
-        if (this.p.style.display == "flex") {
-            this.p.style.display = "none";
-        } else {
-            this.p.style.display = "flex";
-            this.p.style.backgroundColor = rgba(140, 0, 0, 0);
-        }
-    }
-}
+//     mostrar() {
+//         if (this.p.style.display == "flex") {
+//             this.p.style.display = "none";
+//         } else {
+//             this.p.style.display = "flex";
+//             this.p.style.backgroundColor = rgba(140, 0, 0, 0);
+//         }
+//     }
+// }
 
 class Platos {
     constructor(id_plato) {
@@ -67,13 +67,72 @@ class Platos {
     }
 }
 
-var ph_sn1 = new PH("p1");
-var ph_nh = new PH("p2")
-var ph_na = new PH("p3")
-var ph_nc = new PH("p4")
-var ph_nf = new PH("p5")
-var ph_sn = new PH("p6")
-var ph_co = new PH("p7")
+class elemento_historia {
+    static coleccion = []
+    constructor(id) {
+        this.nombre = "Este es el elemento " + id
+        this.contenedor = document.getElementById(id)
+        this.parrafo = document.getElementById("p" + id)
+        this.expandido = false
+        elemento_historia.coleccion.push(this)
+
+    }
+    ocultar_todos() {
+        for (let elemento of elemento_historia.coleccion) {
+            elemento.contenedor.className = "sectorOculto"
+        }
+    }
+
+    listar_todos() {
+        for (let elemento of elemento_historia.coleccion) {
+            console.log(elemento.nombre)
+        }
+    }
+
+    colapsar_todos() {
+        for (let elemento of elemento_historia.coleccion) {
+            elemento.expandido = false
+            elemento.contenedor.className = "sectorRetraido"
+            elemento.parrafo.style.display = "none"
+        }
+    }
+    expandir() {
+        // this.ocultar_todos()
+        this.contenedor.className = "sectorExpandido"
+        this.parrafo.style.display = "flex"
+    }
+
+    cambiar_estado() {
+        if (this.expandido == false) {
+            this.expandido = true
+            this.expandir()
+        } else {
+            this.expandido = false
+            this.colapsar_todos()
+        }
+    }
+}
+
+
+
+
+
+
+var eh1 = new elemento_historia("1")
+var eh2 = new elemento_historia("2")
+var eh3 = new elemento_historia("3")
+var eh4 = new elemento_historia("4")
+var eh5 = new elemento_historia("5")
+var eh6 = new elemento_historia("6")
+var eh7 = new elemento_historia("7")
+
+// var ph_sn1 = new PH("p1");
+// var ph_nh = new PH("p2")
+// var ph_na = new PH("p3")
+// var ph_nc = new PH("p4")
+// var ph_nf = new PH("p5")
+// var ph_sn = new PH("p6")
+// var ph_co = new PH("p7")
 
 var comm = new Platos("comidas")
 var bebb = new Platos("bebidas")

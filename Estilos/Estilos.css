@@ -691,7 +691,11 @@ h3 {
     margin-bottom: 5%;
 }
 
-.sector {
+.sectorOculto {
+    display: none;
+}
+
+.sectorRetraido {
     width: 25%;
     height: fit-content;
     padding: 2% 2% 2% 2%;
@@ -704,7 +708,9 @@ h3 {
 }
 
 
-.sector:hover {
+
+.sectorRetraido:hover {
+    /* display: flex; */
     width: 25%;
     height: fit-content;
     padding: 2% 2% 2% 2%;
@@ -713,11 +719,20 @@ h3 {
     box-shadow: 10px 10px;
     border-radius: 75px;
     color: yellow;
-
-
 }
 
-
+.sectorExpandido {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: fit-content;
+    padding: 2% 2% 2% 2%;
+    background-color: #4e00647a;
+    margin-bottom: 5%;
+    box-shadow: 10px 10px;
+    border-radius: 75px;
+    color: yellow;
+}
 
 .flechaAbajo {
     width: 40px;
