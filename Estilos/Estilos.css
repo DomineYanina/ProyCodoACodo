@@ -319,7 +319,7 @@ h3 {
     font-weight: 400;
 }
 
-h4 {
+/* h4 {
     font-family: "Amatic SC", sans-serif;
     font-weight: bold;
     font-style: normal;
@@ -327,7 +327,7 @@ h4 {
     text-decoration: underline;
     text-align: center;
     color: yellow;
-}
+} */
 
 .menuitemdesc {
     text-align: center;
