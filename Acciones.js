@@ -19,7 +19,7 @@ class PH {
             this.p.style.display = "none";
         } else {
             this.p.style.display = "flex";
-            this.p.style.backgroundColor = "#4e00647a";
+            this.p.style.backgroundColor = rgba(140, 0, 0, 0);
         }
     }
 }
