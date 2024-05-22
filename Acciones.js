@@ -79,4 +79,13 @@ var comm = new Platos("comidas")
 var bebb = new Platos("bebidas")
 var poss = new Platos("postres")
 
-
+document.addEventListener('scroll', function() {
+    const logo = document.querySelector('.logo');
+    const threshold = 100;
+    
+    if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - threshold)) {
+    logo.classList.add('large');
+    } else {
+    logo.classList.remove('large');
+    }
+});

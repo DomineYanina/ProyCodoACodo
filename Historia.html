@@ -151,7 +151,24 @@
     </main>
     <img class="logo" src="./Img/LogoMoe.png" alt="">
         <iframe src="footer.html" frameborder="0"></iframe>
-    <script src="./Acciones.js"></script>
+    <script src="/Acciones.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('scroll', function() {
+                console.log("Scroll event detected");
+                const logo = document.querySelector('.logo');
+                const threshold = 100;
+
+                if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - threshold)) {
+                    console.log("Adding large class");
+                    logo.classList.add('large');
+                } else {
+                    console.log("Removing large class");
+                    logo.classList.remove('large');
+                }
+            });
+        });
+    </script>
 </body>
 
 
