@@ -36,31 +36,28 @@
 
     <main>
         <section class="formulario">
-            <div class="desc">
-                <p class="parrafo">Dejanos tu mensaje</p>
-            </div>
+                <h2 class="parrafo">Dejanos tu mensaje</h2>
             <div class="cuerpo">
-                <label>
-                    <p>Nombre:</p>
+                <div>
+                    <label>Nombre:</label>
                     <input type="text" id="txtNombre" class="form-control" name="name" placeholder="Nombre">
-                </label>
-                <label>
-                    <p>E-mail:</p>
+                </div>
+                <div>
+                    <label>E-mail:</label>
                     <input type="email" id="txtEmail" class="form-control" placeholder="Enter email">
-                </label>
-                <label>
-                    <p>Teléfono:</p>
+                </div>
+                <div>
+                    <label>Teléfono:</label>
                     <input type="tel" id="txtTelefono" class="form-control" name="number" placeholder="Teléfono">
-                </label>
-                <label>
-                    <p>Asunto:</p>
+                </div>
+                <div>
+                    <label>Asunto:</label>
                     <input type="text" id="txtAsunto" class="form-control" name="message" placeholder="Asunto">
-                </label>
-                <label>
-                    <p>Mensaje:</p>
+                </div>
+                <div>
+                    <label>Mensaje:</label>
                     <textarea class="form-control" id="txtMensaje" rows="3"></textarea>
-                </label>
-
+                </div>
                 <button class="btn btn-outline-info" id="enviarSolicitudContacto" type="submit"
                     style="display: none;">Enviar</button>
             </div>
@@ -68,7 +65,7 @@
         </section>
         <img class="logo" src="./Img/LogoMoe.png" alt="">
     </main>
-    <iframe src="footer.html" frameborder="0"></iframe>
+    <iframe src="footer.html"></iframe>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const nombre = document.getElementById('txtNombre');

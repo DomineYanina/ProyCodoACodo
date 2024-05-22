@@ -14837,7 +14837,7 @@ fieldset:disabled .btn {
   font-family: "Indie Flower", cursive;
   font-size: 1.75em;
   color: white;
-  width: 35%;
+  width: 30%;
   box-shadow: 10px 10px black;
   height: fit-content;
   border-radius: 10px;
@@ -14855,7 +14855,7 @@ fieldset:disabled .btn {
   font-size: 0.5em;
 }
 
-.cuerpo label {
+.cuerpo div {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -14870,11 +14870,13 @@ fieldset:disabled .btn {
   text-align: center;
 }
 
-.desc p {
+.formulario h2 {
   font-family: "Lora", serif;
-  font-size: 0.76em;
+  font-size: 0.9em;
   text-decoration: underline;
   color: yellow;
+  margin-bottom: 7.5%;
+  text-align: center;
 }
 
 .cuerpo {
@@ -14883,7 +14885,7 @@ fieldset:disabled .btn {
   flex-direction: column;
 }
 
-.cuerpo p {
+.cuerpo div label {
   color: white;
   font-family: "Lora", serif;
   font-size: 0.5em;
