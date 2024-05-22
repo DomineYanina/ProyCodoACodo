@@ -58,7 +58,7 @@
             </label>
             <label>
                 <p>Cantidad:</p>
-                <input type="number" class="form-control" name="npersonas" id="NumPersonas" placeholder="Número de personas">
+                <input type="number" class="form-control" name="npersonas" id="NumPersonas" placeholder="Número de personas" min="1">
             </label>
             <label>
                 <p>Fecha:</p>
@@ -112,9 +112,11 @@
             const apellido = document.getElementById('Apellido');
             const numPersonas = document.getElementById('NumPersonas');
             const festejos = document.getElementById('festejos');
-            const Ubicacion = document.getElementById('Ubicacion');
+            const ubicacion = document.getElementById('Ubicacion');
             const seleccionFechaReserva = document.getElementById('seleccionFechaReserva');
             const enviarBtn = document.getElementById('enviarReserva');
+            const radioSi = document.getElementById('radioSi');
+            const radioNo = document.getElementById('radioNo');
 
             // Clear fields on page load to ensure placeholders are respected
             const clearFields = () => {
@@ -124,13 +126,20 @@
                 apellido.value = '';
                 numPersonas.value = '';
                 festejos.value = '';
-                Ubicacion.value = '';
+                ubicacion.value = '';
                 seleccionFechaReserva.value = '';
             };
 
             const checkFields = () => {
                 const allValid = [nombre, email, telefono, apellido, numPersonas, seleccionFechaReserva].every(field => field.classList.contains('is-valid'));
-                enviarBtn.style.display = allValid ? 'block' : 'none';
+                const radioNoChecked = radioNo.checked;
+                const radioSiChecked = radioSi.checked && festejos.value !== '';
+
+                if (allValid && (radioNoChecked || radioSiChecked)) {
+                    enviarBtn.style.display = 'block';
+                } else {
+                    enviarBtn.style.display = 'none';
+                }
             };
 
             const validateField = (field, validationFn) => {
@@ -149,16 +158,25 @@
             const isValidText = (text) => text.trim().length > 0;
             const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
             const isValidPhone = (phone) => /^\d{10}$/.test(phone);
+            const isValidNumber = (Number) => Number>0;
 
             validateField(nombre, isValidText);
             validateField(email, isValidEmail);
             validateField(telefono, isValidPhone);
             validateField(apellido, isValidText);
+            validateField(numPersonas, isValidNumber);
+            validateField(seleccionFechaReserva, isValidText);
+
+            // Add event listeners for radio buttons and select
+            radioSi.addEventListener('change', checkFields);
+            radioNo.addEventListener('change', checkFields);
+            festejos.addEventListener('change', checkFields);
 
             // Hide the button initially and clear fields on page load
             enviarBtn.style.display = 'none';
             clearFields();
         });
+
     </script>
 </body>
 
