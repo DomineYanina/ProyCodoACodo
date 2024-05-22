@@ -11,8 +11,7 @@
 </head>
 
 <body>
-    <!--<header>
-    </header>-->
+
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarColor01">
@@ -152,8 +151,29 @@
         <button onclick="eh1.expandir()">Expandir 1</button>
     </main>
     <img class="logo" src="./Img/LogoMoe.png" alt="">
-    <iframe src="footer.html" frameborder="0"></iframe>
-    <script src="./Acciones.js"></script>
+    <<<<<<< HEAD <iframe src="footer.html" frameborder="0"></iframe>
+        <script src="./Acciones.js"></script>
+        =======
+        <iframe src="footer.html" frameborder="0"></iframe>
+        <script src="/Acciones.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.addEventListener('scroll', function () {
+                    console.log("Scroll event detected");
+                    const logo = document.querySelector('.logo');
+                    const threshold = 100;
+
+                    if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - threshold)) {
+                        console.log("Adding large class");
+                        logo.classList.add('large');
+                    } else {
+                        console.log("Removing large class");
+                        logo.classList.remove('large');
+                    }
+                });
+            });
+        </script>
+        >>>>>>> fa5f5baa540acd14dffdf6e9e68a17b223ef92bf
 </body>
 
 

@@ -139,18 +139,6 @@ iframe {
     grid-template-columns: auto auto;
 }
 
-.logo {
-    width: 300px;
-    height: 300px;
-    position: fixed;
-    /* Fija la posición del contenedor en relación con la ventana del navegador */
-    bottom: 0;
-    /* Lo sitúa en la parte inferior */
-    right: 0;
-    /* Lo sitúa en la esquina derecha */
-    z-index: 999;
-    /* Asegura que la imagen esté por encima del footer */
-}
 
 /*SECTOR CARROUSEL HOME*/
 
