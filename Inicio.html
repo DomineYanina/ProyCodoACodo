@@ -12,18 +12,20 @@
     <title>La Taberna de Moe</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
-        #mainInicio{
+
+        #mainInicio {
             display: flex !important;
-            flex-direction: column !important; 
-            align-items: center !important; 
+            flex-direction: column !important;
+            align-items: center !important;
             min-height: 100vh !important;
             background-color: #ff62ac;
         }
 
         .patron {
-            background-image: url(../Img/istockphoto-1251213570-612x612.jpg);
+            background-image: url(Img/istockphoto-1251213570-612x612.jpg);
             background-repeat: repeat-x;
-            height: 60vh; /* 50% de la altura de la ventana gráfica */
+            height: 60vh;
+            /* 50% de la altura de la ventana gráfica */
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -31,6 +33,7 @@
             justify-content: center;
             position: relative;
         }
+
         .patron h2,
         .patron p {
             color: darkslategrey;
@@ -46,7 +49,7 @@
             text-decoration: underline;
         }
 
-        .segundaMitadHome{
+        .segundaMitadHome {
             padding: 2% 2% 2% 2%;
             display: flex;
             flex-direction: row;
@@ -56,11 +59,11 @@
             width: 100%;
         }
 
-        .segundaMitadHome div{
+        .segundaMitadHome div {
             height: 100%;
         }
 
-        .itemhome button{
+        .itemhome button {
             width: 100%;
         }
     </style>
@@ -70,34 +73,45 @@
     <main id="mainInicio">
         <section class="patron">
             <h2>La taberna de Moe</h2>
-            <p>¡Sumérgete en el mundo de Los Simpson mientras disfrutas de nuestras bebidas!<br>Desde la cerveza Duff hasta la Llamarada Moe, tenemos algo para cada fanático.<br>¡Únete a nosotros para una experiencia digna de Springfield!</p>
+            <p>¡Sumérgete en el mundo de Los Simpson mientras disfrutas de nuestras bebidas!<br>Desde la cerveza Duff
+                hasta la Llamarada Moe, tenemos algo para cada fanático.<br>¡Únete a nosotros para una experiencia digna
+                de Springfield!</p>
         </section>
         <section class="segundaMitadHome">
             <div class="homeitem">
                 <h3>Reserva tu mesa</h3>
-                <p>Asegurá tu lugar en el bar más amarillo de Springfield antes de que Barney te robe tu ubicación favorita.</p>
+                <p>Asegurá tu lugar en el bar más amarillo de Springfield antes de que Barney te robe tu ubicación
+                    favorita.</p>
                 <button type="button" class="btn btn-outline-info" onclick="redirigirReserva()">Reservas</button>
             </div>
             <div class="homeitem">
                 <h3>Chequeá nuestro menú</h3>
-                <p>Recorré nuestra amplia variedad de comidas y bebidas para deleitarte con lo mejor que Moe tiene para ofrecerte.</p>
+                <p>Recorré nuestra amplia variedad de comidas y bebidas para deleitarte con lo mejor que Moe tiene para
+                    ofrecerte.</p>
                 <button type="button" class="btn btn-outline-info" onclick="redirigirMenu()">Menú</button>
             </div>
             <div class="homeitem">
                 <h3>Nuestra historia</h3>
-                <p>Conocé como inició esta aventura y como llegamos a convertirnos en el fenómeno mundial que somos hoy.</p>
-                <button type="button" class="btn btn-outline-info" onclick="redirigirSobreNosotros()">Sobre Nosotros</button>
+                <p>Conocé como inició esta aventura y como llegamos a convertirnos en el fenómeno mundial que somos hoy.
+                </p>
+                <button type="button" class="btn btn-outline-info" onclick="redirigirSobreNosotros()">Sobre
+                    Nosotros</button>
             </div>
             <div class="homeitem">
                 <h3>Contactanos</h3>
                 <p>Envianos tu consulta, prometemos responder ni bien logremos que el abuelo aprenda como hacerlo.</p>
                 <button type="button" class="btn btn-outline-info" onclick="redirigirContacto()">Contacto</button>
             </div>
+            <div class="homeitem">
+                <h3>Identificarse</h3>
+                <p>Iniciá sesión para poder hacer reservas.</p>
+                <button type="button" class="btn btn-outline-info" onclick="iniciarSesion()">Iniciar sesión</button>
+            </div>
         </section>
         <img class="logo" src="./Img/LogoMoe.png" alt="">
     </main>
-    
-	<script>
+
+    <script>
         function redirigirReserva() {
             window.location.href = 'Reserva.html';
         }
@@ -109,6 +123,9 @@
         }
         function redirigirContacto() {
             window.location.href = 'Contacto.html';
+        }
+        function iniciarSesion() {
+            window.location.href = 'iSesion.html';
         }
     </script>
 </body>
