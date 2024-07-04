@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="Estilos/bootstrap.css" rel="stylesheet">
-    <!--<link href="Estilos/Estilos.css" rel="stylesheet">-->
     <link href="Img/favicon.ico" rel="icon">
     <title>Reservas</title>
     <style>
@@ -18,7 +16,6 @@
         }
     </style>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid">
@@ -44,7 +41,7 @@
         </div>
     </nav>
     <main>
-        <form class="formulario" action="https://formspree.io/f/xgegdwjp" method="POST">
+        <form class="formulario" action="/reservar" method="POST">
             <h2 class="parrafo">Ingrese la información de la reserva.</h2>
             <div class="cuerpo">
                 <div>
@@ -73,7 +70,7 @@
                 </div>
                 <div>
                     <label>Ubicación:</label>
-                    <select class="form-control" id="Ubicacion">
+                    <select class="form-control" name="ubicacion" id="Ubicacion">
                         <option value="" selected>Seleccione una opción</option>
                         <option value="Afuera">Balcón</option>
                         <option value="Salon">Salón</option>
@@ -94,7 +91,7 @@
                     </div>
                 </div>
                 <div>
-                    <select class="form-select" id="festejos" style="display: none;">
+                    <select class="form-select" name="festejos" id="festejos" style="display: none;">
                         <option value="" selected>Seleccione una opción</option>
                         <option value="Aniversario">Aniversario</option>
                         <option value="Cumpleanios">Cumpleaños</option>
@@ -102,15 +99,11 @@
                         <option value="Otros">Otros</option>
                     </select>
                 </div>
-                <button class="btn btn-outline-info" id="enviarReserva" type="submit"
-                        style="display: none;">Enviar</button>
+                <button class="btn btn-outline-info" id="enviarReserva" type="submit" style="display: none;">Enviar</button>
             </div>
         </form>
     </main>
-    <!--Formulario de reversacion de mesa-->
-    
-        <iframe src="footer.html"></iframe>
-    
+    <iframe src="footer.html"></iframe>
     <img class="logo" src="./Img/LogoMoe.png" alt="">
     <script src="Acciones.js"></script>
     <script>
@@ -188,5 +181,4 @@
 
     </script>
 </body>
-
 </html>
