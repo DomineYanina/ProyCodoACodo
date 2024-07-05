@@ -9,7 +9,7 @@ app = Flask(__name__)
 def get_db_connection():
     return mysql.connector.connect(
         host="localhost",
-        port=3307,
+        port=3306,
         user="root",
         password="",
         database="proycodoacodo"
@@ -36,14 +36,19 @@ def crear_usuario():
     # Aseguramos el uso de parámetros para prevenir inyección SQL
     query = """INSERT INTO usuario 
                (usuario, clave, nombre, apellido, email, telefono) 
-               VALUES (?, ?, ?, ?, ?, ?)"""
+               VALUES (%s, %s, %s, %s, %s, %s)"""
     params = (usuario, clave, nombre, apellido, email, telefono)
+    
+    # Conexión a la base de datos y ejecución de la consulta
     con = get_db_connection()
     cur = con.cursor()
     cur.execute(query, params)
     con.commit()
     con.close()
     
+    # Responder al cliente
+    return "Usuario creado exitosamente", 201  # Código de estado 201: Created
+
 
 
 @app.route("/iniciar_sesion", methods=['POST'])
@@ -53,16 +58,16 @@ def iniciar_sesion():
 
     con = get_db_connection()
     cur = con.cursor()
-    cur.execute("SELECT * FROM usuario")
+    cur.execute("SELECT usuario, clave FROM usuario")
     usuarios = cur.fetchall()
     con.close()
-    for _, u, c, _, _, _, _ in usuarios:
-        print(len(usuarios))
-        MsgBox(message=f"{usuario}|{u} --- {clave}|{c}")
+
+    for u, c in usuarios:
         if u == usuario and c == clave:
             return "ACCESO CONCEDIDO"
-        else:
-            return "ACCESO DENEGADO"
+
+    return "ACCESO DENEGADO"
+
 
 
 @app.route('/reservar', methods=['POST'])
