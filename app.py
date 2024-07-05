@@ -4,30 +4,52 @@ import mysql.connector
 app = Flask(__name__)
 
 # Configuración de la base de datos
+
+
 def get_db_connection():
     return mysql.connector.connect(
         host="localhost",
-        port=3307,
+        port=3306,
         user="root",
         password="",
         database="proycodoacodo"
-    )
+    )  # OJO CON EL PUERTO!!!!
+# OJO CON EL PUERTO!!!!
+# OJO CON EL PUERTO!!!!
+
 
 @app.route('/')
 def index():
     return render_template('Reserva.html')
 
+
+@app.route("/crear_usuario", methods=['POST'])
+def crear_usuario():
+    # datos del form
+    usuario = request.form.get("usuario")
+    clave = request.form.get("clave")
+    nombre = request.form.get("nombre")
+    apellido = request.form.get("apellido")
+    email = request.form.get("email")
+    telefono = request.form.get("telefono")
+
+    con = get_db_connection()
+    cur = con.cursor()
+    cur.execute(f"INSERT INTO usuario (usuario, clave, nombre, apellido, email, telefono) VALUES('{
+                usuario}','{clave}','{nombre}','{apellido}','{email}','{telefono}')")
+    con.commit()
+    con.close
+    return "OK"
+
+
 @app.route('/reservar', methods=['POST'])
 def reservar():
     # Obtener datos del formulario
-    nombre = request.form.get('name')
-    apellido = request.form.get('lastName')
-    telefono = request.form.get('number')
-    email = request.form.get('email')
     num_personas = request.form.get('npersonas')
-    fecha_reserva = request.form.get('message')
+    fecha_reserva = request.form.get('fecha')
     ubicacion = request.form.get('ubicacion')
-    festejo = request.form.get('festejos') if request.form.get('Festejo') == 'true' else None
+    festejo = request.form.get('festejos') if request.form.get(
+        'Festejo') == 'true' else None
 
     # Realizar la conexión a la base de datos
     conn = get_db_connection()
@@ -38,7 +60,8 @@ def reservar():
     INSERT INTO reserva (nombre, apellido, telefono, email, num_personas, fecha_reserva, ubicacion, festejo)
     VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
     """
-    values = (nombre, apellido, telefono, email, num_personas, fecha_reserva, ubicacion, festejo)
+    values = (nombre, apellido, telefono, email,
+              num_personas, fecha_reserva, ubicacion, festejo)
     cursor.execute(query, values)
     conn.commit()
 
@@ -47,6 +70,17 @@ def reservar():
     conn.close()
 
     return redirect(url_for('index'))
+
+    # TABLA BORRAME
+    # nombre = request.form.get('nombre')
+    # edad = request.form.get('edad')
+    # conn = get_db_connection()
+    # cur = conn.cursor()
+    # cur.execute(
+    #     f"INSERT INTO Borrame (Nombre, Edad) VALUES ('{nombre}',{str(edad)})")
+    # conn.commit()
+    # return "OK"
+
 
 if __name__ == '__main__':
     app.run(debug=True)
