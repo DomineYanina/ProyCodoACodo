@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, redirect, url_for
 import mysql.connector
-
+from tkinter.messagebox import showinfo as MsgBox
 app = Flask(__name__)
 
 # Configuración de la base de datos
@@ -42,7 +42,26 @@ def crear_usuario():
     return "OK"
 
 
-@app.route('/reservar', methods=['POST'])
+@app.route("/iniciar_sesion", methods=['POST'])
+def iniciar_sesion():
+    usuario = request.form.get("usuario")
+    clave = request.form.get("clave")
+
+    con = get_db_connection()
+    cur = con.cursor()
+    cur.execute("SELECT * FROM usuario")
+    usuarios = cur.fetchall()
+    con.close()
+    for _, u, c, _, _, _, _ in usuarios:
+        print(len(usuarios))
+        MsgBox(message=f"{usuario}|{u} --- {clave}|{c}")
+        if u == usuario and c == clave:
+            return "ACCESO CONCEDIDO"
+        else:
+            return "ACCESO DENEGADO"
+
+
+@ app.route('/reservar', methods=['POST'])
 def reservar():
     # Obtener datos del formulario
     num_personas = request.form.get('npersonas')
