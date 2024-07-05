@@ -78,7 +78,7 @@
                 de Springfield!</p>
         </section>
         <section class="segundaMitadHome">
-            <div class="homeitem">
+            <!-- <div class="homeitem">
                 <h3>Reserva tu mesa</h3>
                 <p>Asegurá tu lugar en el bar más amarillo de Springfield antes de que Barney te robe tu ubicación
                     favorita.</p>
@@ -101,11 +101,16 @@
                 <h3>Contactanos</h3>
                 <p>Envianos tu consulta, prometemos responder ni bien logremos que el abuelo aprenda como hacerlo.</p>
                 <button type="button" class="btn btn-outline-info" onclick="redirigirContacto()">Contacto</button>
+            </div> -->
+            <div class="homeitem">
+                <h3>¿Ya nos conocías?</h3>
+                <p>Inicia sesión, amigo.</p>
+                <button type="button" class="btn btn-outline-info" onclick="iniciarSesion()">Iniciar sesión</button>
             </div>
             <div class="homeitem">
-                <h3>Identificarse</h3>
-                <p>Iniciá sesión para poder hacer reservas.</p>
-                <button type="button" class="btn btn-outline-info" onclick="iniciarSesion()">Iniciar sesión</button>
+                <h3>¿Recién nos conoces?</h3>
+                <p>¡Registrate, baboso!</p>
+                <button type="button" class="btn btn-outline-info" onclick="registrarme()">Yendo</button>
             </div>
         </section>
         <img class="logo" src="./Img/LogoMoe.png" alt="">
@@ -126,6 +131,9 @@
         }
         function iniciarSesion() {
             window.location.href = 'iSesion.html';
+        }
+        function registrarme(){
+            window.location.href = 'registro.html';
         }
     </script>
 </body>
