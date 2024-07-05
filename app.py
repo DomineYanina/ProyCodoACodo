@@ -61,7 +61,7 @@ def iniciar_sesion():
             return "ACCESO DENEGADO"
 
 
-@ app.route('/reservar', methods=['POST'])
+@app.route('/reservar', methods=['POST'])
 def reservar():
     # Obtener datos del formulario
     num_personas = request.form.get('npersonas')
