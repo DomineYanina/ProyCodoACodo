@@ -99,23 +99,23 @@
         </div>
     </nav>
     <main>
-        <form class="formularioRegistro" action="POST">
+        <form class="formularioRegistro" action="http://127.0.0.1:5000/crear_usuario" method="POST">
             <h2 class="parrafo">Registrate</h2>
             <section>
                 <div>
                     <label for="Usuario">Nombre:</label>
-                    <input class="form-control" type="text" name="Usuario" id="txtNombre">
+                    <input class="form-control" type="text" name="nombre" value="nombre" id="txtNombre">
                     <label for="Usuario">Apellido:</label>
-                    <input class="form-control" type="text" name="Usuario" id="txtApellido">
+                    <input class="form-control" type="text" name="apellido" value="apellido" id="txtApellido">
                     <label for="Usuario">E-Mail:</label>
-                    <input class="form-control" type="text" name="Usuario" id="txtEmail"></div>
+                    <input class="form-control" type="text" name="email" value="email" id="txtEmail"></div>
                 <div>
                     <label for="Usuario">Teléfono:</label>
-                    <input class="form-control" type="text" name="Usuario" id="txtTelefono">
+                    <input class="form-control" type="text" name="telefono" value="telefono" id="txtTelefono">
                     <label for="Usuario">Usuario:</label>
-                    <input class="form-control" type="text" name="Usuario" id="txtUsuario">
+                    <input class="form-control" type="text" name="usuario" value="usuario" id="txtUsuario">
                     <label for="Clave">Contraseña:</label>
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" autocomplete="off">
+                    <input type="password" class="form-control" name="clave" value="clave" id="floatingPassword" placeholder="Password" autocomplete="off">
                 </div>
             </section>
             <button type="submit" class="btn btn-outline-primary">Registrarme</button>

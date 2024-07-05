@@ -9,7 +9,7 @@ app = Flask(__name__)
 def get_db_connection():
     return mysql.connector.connect(
         host="localhost",
-        port=3306,
+        port=3307,
         user="root",
         password="",
         database="proycodoacodo"
@@ -25,21 +25,25 @@ def index():
 
 @app.route("/crear_usuario", methods=['POST'])
 def crear_usuario():
-    # datos del form
+    # Datos del formulario
     usuario = request.form.get("usuario")
     clave = request.form.get("clave")
     nombre = request.form.get("nombre")
     apellido = request.form.get("apellido")
     email = request.form.get("email")
     telefono = request.form.get("telefono")
-
+    
+    # Aseguramos el uso de parámetros para prevenir inyección SQL
+    query = """INSERT INTO usuario 
+               (usuario, clave, nombre, apellido, email, telefono) 
+               VALUES (?, ?, ?, ?, ?, ?)"""
+    params = (usuario, clave, nombre, apellido, email, telefono)
     con = get_db_connection()
     cur = con.cursor()
-    cur.execute(f"INSERT INTO usuario (usuario, clave, nombre, apellido, email, telefono) VALUES('{
-                usuario}','{clave}','{nombre}','{apellido}','{email}','{telefono}')")
+    cur.execute(query, params)
     con.commit()
-    con.close
-    return "OK"
+    con.close()
+    
 
 
 @app.route("/iniciar_sesion", methods=['POST'])
@@ -76,11 +80,10 @@ def reservar():
 
     # Ejecutar la consulta SQL para insertar los datos
     query = """
-    INSERT INTO reserva (nombre, apellido, telefono, email, num_personas, fecha_reserva, ubicacion, festejo)
-    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+    INSERT INTO reserva (num_personas, fecha_reserva, ubicacion, festejo)
+    VALUES (%s, %s, %s, %s)
     """
-    values = (nombre, apellido, telefono, email,
-              num_personas, fecha_reserva, ubicacion, festejo)
+    values = (num_personas, fecha_reserva, ubicacion, festejo)
     cursor.execute(query, values)
     conn.commit()
 
