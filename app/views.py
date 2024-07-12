@@ -1,4 +1,4 @@
-from flask import jsonify, request, app
+from flask import app, jsonify, render_template, request, jsonify, url_for
 from app.models import Reserva, Usuario  # Ajusta la importación de modelos según la estructura de tu proyecto
 
 def index():
@@ -22,7 +22,7 @@ def crear_usuario():
     )
     nuevo_usuario.guardar()
 
-    return jsonify({'message': 'Usuario creado correctamente'}), 201  # Ejemplo de respuesta JSON para indicar éxito y código HTTP 201
+    return render_template("confirmaciónNuevoUsuario.html"), 201
 
 def traer_usuarios():
     usuarios = Usuario.traer_todos()
@@ -76,6 +76,8 @@ def crear_reserva():
         nombreCompletoUsuario=nombreCompletoUsuario
     )
     nueva_reserva.guardar()
+
+    return render_template("confirmaciónReserva.html"), 201
 
 def traer_reservas():
     reservas = Reserva.traer_todos()

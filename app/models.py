@@ -1,5 +1,5 @@
 from app.database import get_db_connection
-
+import pymysql.cursors
 
 class Usuario:
     def __init__(self, nombreUsuario, clave, nombre, apellido, email, telefono):
@@ -11,7 +11,7 @@ class Usuario:
         self.telefono = telefono
 
     def guardar(self):
-        db = get_db_connection()
+        db = get_db_connection()  # Asume que tienes una función get_db_connection() configurada correctamente
         cursor = db.cursor()
         cursor.execute(
             "INSERT INTO usuario (nombreUsuario, clave, nombre, apellido, email, telefono) VALUES (%s, %s, %s, %s, %s, %s)",

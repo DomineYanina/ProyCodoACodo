@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Estilos/bootstrap.css" rel="stylesheet">
+    <link href="Estilos/Estilos.css" rel="stylesheet">
+    <link href="Img/favicon.ico" rel="icon">
+    <title>Reserva confirmada</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+        }
+
+        .sectorOculto {
+            display: none;
+        }
+
+        .sectorRetraido {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.5s;
+        }
+
+        .sectorExpandido {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.5s;
+        }
+
+        .rotate {
+            transform: rotate(180deg);
+            transition: transform 0.5s;
+        }
+        main div{
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            height: 50%;
+            text-align: center;
+            color: black;
+        }
+        main div h2{
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        main{
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Reserva.html">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Historia.html">Sobre nosotros</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div>
+            <h2>¡Tu reserva fue realizada correctamente!</h2>
+            <p>¿No había mejores lugares disponibles, verdad? ¡Te esperamos con ansias!</p>
+        </div>
+    </main>
+    <img class="logo" src="./Img/LogoMoe.png" alt="">
+
+    <iframe src="footer.html"></iframe>
+    <script src="/Acciones.js"></script>
+    
+</body>
+
+</html>
