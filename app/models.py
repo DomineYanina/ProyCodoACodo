@@ -2,25 +2,25 @@ from app.database import get_db_connection
 
 
 class Usuario:
-    def __init__(self, cantidadPersonas, fecha, ubicacion, ocasionEspecialCual, emailUsuario, telefonoUsuario, nombreCompletoUsuario):
-        self.cantidadPersonas = cantidadPersonas
-        self.fecha = fecha
-        self.ubicacion = ubicacion
-        self.ocasionEspecialCual = ocasionEspecialCual
-        self.emailUsuario = emailUsuario
-        self.telefonoUsuario = telefonoUsuario
-        self.nombreCompletoUsuario = nombreCompletoUsuario
+    def __init__(self, nombreUsuario, clave, nombre, apellido, email, telefono):
+        self.nombreUsuario = nombreUsuario
+        self.clave = clave
+        self.nombre = nombre
+        self.apellido = apellido
+        self.email = email
+        self.telefono = telefono
 
     def guardar(self):
         db = get_db_connection()
         cursor = db.cursor()
         cursor.execute(
-            "INSERT INTO reserva (cantidadPersonas, fecha, ubicacion, ocasionEspecialCual, mailUsuario, telefonoUsuario, nombreCompletoUsuario) VALUES (%s, %s, %s, %s, %s, %s, %s)",
-            (self.cantidadPersonas, self.fecha, self.ubicacion, self.ocasionEspecialCual,
-             self.emailUsuario, self.telefonoUsuario, self.nombreCompletoUsuario)
+            "INSERT INTO usuario (nombreUsuario, clave, nombre, apellido, email, telefono) VALUES (%s, %s, %s, %s, %s, %s)",
+            (self.nombreUsuario, self.clave, self.nombre, self.apellido,
+            self.email, self.telefono)
         )
         db.commit()
         cursor.close()
+
 
     @staticmethod
     def traer_todos():
@@ -31,7 +31,7 @@ class Usuario:
         usuarios = []
         for registro in registros:
             usuarios.append(Usuario(
-                registro[0], registro[1], registro[2], registro[3], registro[4], registro[5], registro[6]))
+                registro[0], registro[1], registro[2], registro[3], registro[4], registro[5]))
         cur.close()
         return usuarios
 
@@ -57,7 +57,7 @@ class Usuario:
         row = cursor.fetchone()
         cursor.close()
         if row:
-            return Usuario(id=row[0], usuario=row[1], clave=row[2], nombre=row[3], apellido=row[4], email=row[5], telefono=row[6])
+            return Usuario(id=row[0], usuario=row[1], clave=row[2], nombre=row[3], apellido=row[4], email=row[5])
         return None
 
     def eliminar(self):
@@ -70,7 +70,7 @@ class Usuario:
     def serialize(self):
         return {
             'id': self.id,
-            'usuario': self.usuario,
+            'usuario': self.nombreUsuario,
             'clave': self.clave,
             'nombre': self.nombre,
             'apellido': self.apellido,

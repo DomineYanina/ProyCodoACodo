@@ -5,15 +5,24 @@ def index():
     return jsonify({'message': "Bienvenidos a la API de la Taberna de Moe"})
 
 def crear_usuario():
-    usuario = request.form.get("usuario")
+    nombreUsuario = request.form.get("usuario")
     clave = request.form.get("clave")
     nombre = request.form.get("nombre")
     apellido = request.form.get("apellido")
     email = request.form.get("email")
     telefono = request.form.get("telefono")
-    nuevo_usuario = Usuario(None, usuario, clave, nombre,
-                            apellido, email, telefono)
+
+    nuevo_usuario = Usuario(
+        nombreUsuario=nombreUsuario,
+        clave=clave,
+        nombre=nombre,
+        apellido=apellido,
+        email=email,
+        telefono=telefono,
+    )
     nuevo_usuario.guardar()
+
+    return jsonify({'message': 'Usuario creado correctamente'}), 201  # Ejemplo de respuesta JSON para indicar éxito y código HTTP 201
 
 def traer_usuarios():
     usuarios = Usuario.traer_todos()
@@ -30,7 +39,7 @@ def actualizar_usuario(id):
     if not usuario:
         return jsonify({'message': 'Usuario no encontrado'}), 404
     data = request.json
-    usuario.usuario = data['usuario']
+    usuario.nombreUsuario = data['usuario']
     usuario.clave = data['clave']
     usuario.nombre = data['nombre']
     usuario.apellido = data['apellido']
