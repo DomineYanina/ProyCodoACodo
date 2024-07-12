@@ -188,32 +188,6 @@
                 logo.classList.remove('large');
             }
         });
-
-        const btnRegistrar = document.getElementById('btnRegistrar');
-
-        btnRegistrar.addEventListener('click', function(event) {
-            event.preventDefault(); // Evita el comportamiento por defecto del formulario
-            enviarFormulario();
-        });
-
-        function enviarFormulario() {
-            const form = document.getElementById('userForm');
-            const formData = new FormData(form);
-
-            fetch('http://127.0.0.1:5000/crear_usuario', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.redirect) {
-                    window.location.href = data.redirect; // Redirige a la URL devuelta por Flask
-                }
-            })
-            .catch(error => {
-                console.error('Error al registrar usuario:', error);
-            });
-        }
     </script>
 </body>
 </html>

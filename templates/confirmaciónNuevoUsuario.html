@@ -9,12 +9,196 @@
     <link href="Img/favicon.ico" rel="icon">
     <title>¡Bienvenido!</title>
     <style>
+        div a {
+            text-decoration: none;
+        }
+
+        div a i {
+            font-size: 32px;
+        }
+
+        a:link,
+        a:visited {
+            color: white;
+        }
+        
+        .footerBody {
+            background-color: #1e6187;
+            padding: 0;
+            margin: 0;
+            height: min-content;
+            display: flex;
+            flex-direction: row;
+            PADDING-LEFT: 5%;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+
+        .footer-contenedor {
+            background-color: #1e6187;
+            display: flex;
+            gap: 2%;
+            flex-direction: row;
+            justify-content: start;
+            width: calc(100% - 300px);
+        }
+
+        .footer-contenido {
+            border-right: 1px solid white;
+            padding: 1% 1% 1% 1%;
+            width: 25vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+        }
+
+        .contRedes {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: start;
+        }
+
+        .footer-contenido p {
+            font-size: 0.85em;
+            color: white;
+        }
+
+        .contRedes a{
+            margin-right: 5%;
+        }
+
+        .footer-contenido input{
+            height: 20px;
+            margin-bottom: 2.5%;
+        }
+
+        nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            display: flex;
+            background-color: #1e6187;
+            height: 10vh;
+            align-items: center;
+        }
+
+        ul li {
+            display: inline;
+            padding-left: 1vw;
+            padding-right: 1vh;
+        }
+
+        h1 {
+            color: #000344;
+        }
+
+        nav li a {
+            text-decoration: none;
+            font-weight: bold;
+            font-family: "Indie Flower", cursive;
+            font-size: 1.75em;
+            color: white;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        nav li a:hover {
+            color: #ffeb00;
+            font-size: 2.5em;
+        }
+
+        footer {
+            left: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 17vh;
+            z-index: 0;
+            background-color: #1e6187;
+        }
+
+        .footerBody {
+            background-color: #1e6187;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: min-content;
+            display: flex;
+            flex-direction: row;
+            PADDING-LEFT: 5%;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+
+        .footer-contenedor {
+            display: flex;
+            gap: 2%;
+            flex-direction: row;
+            justify-content: start;
+            width: calc(100% - 300px);
+        }
+
+        .footer-contenido {
+            border-right: 1px solid white;
+            padding: 1% 1% 1% 1%;
+            width: 25vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-content: center;
+        }
+
+        .contRedes {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+
+        .footer-contenido p {
+            font-size: 1.1em;
+        }
+
+        iframe {
+            background-color: #1e6187;
+            width: 100%;
+            overflow: hidden;
+            border: 0;
+
+        }   
+
+        body {
+            background-color: #359dd9;
+            padding: 0;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
         main {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 80vh;
+        }
+
+        iframe {
+            background-color: #1e6187;
+            width: 100%;
+            overflow: hidden;
+            border: 0;
+        }
+
+        .logo {
+            width: 90px;
+            height: auto;
         }
 
         .sectorOculto {
@@ -39,15 +223,13 @@
             transform: rotate(180deg);
             transition: transform 0.5s;
         }
-        main div{
+        .div{
             display: flex;
             flex-direction: column;
-            width: 60%;
-            height: 50%;
             text-align: center;
             color: black;
         }
-        main div h2{
+        .div h1{
             text-decoration: underline;
             font-weight: bold;
         }
@@ -85,13 +267,32 @@
     </nav>
     <main>
         <div>
-            <h2>¡Bienvenido a la comunidad de Moe!</h2>
+            <h1>¡Bienvenido a la comunidad de Moe!</h1>
             <p>Pronto obtendrás beneficios exclusivos por formar parte de esta sect... Perdón, club!</p>
         </div>
     </main>
     <img class="logo" src="./Img/LogoMoe.png" alt="">
 
-    <iframe src="footer.html"></iframe>
+    <section class="footerBody">
+        <div class="footer-contenedor">
+            <article class="footer-contenido" name="Iconos">
+                <p>Suscríbete a nuestras novedades</p>
+                <input type="email">
+                <button type="button" class="btn btn-primary btn-sm">Enviar</button>
+            </article>
+            <article class="footer-contenido" name="Iconos">
+                <p>Seguinos en nuestras redes sociales</p>
+                <div class="contRedes">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </article>
+            <article class="footer-contenido" name="Iconos">
+                <p>© 2024 La taberna de Moe. <br><br>Todos los derechos reservados.</p>
+            </article>
+        </div>
+    </section>
     <script src="/Acciones.js"></script>
     
 </body>
